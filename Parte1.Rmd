@@ -1,0 +1,60 @@
+---
+title: "Parte 1 - O básico do R"
+author: "Rafael Tavares"
+date: "June 29, 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Começando do zero
+
+
+
+## Operações matemáticas e vetores atômicos
+
+O R serve como calculadora é bastante simples realizar operações matemáticas.
+
+Soma:
+
+```{r}
+15 + 5
+```
+
+Subtração:
+
+```{r}
+15 - 5
+```
+
+Multiplicação
+
+```{r}
+15 * 5
+```
+
+Divisão:
+
+```{r}
+15 / 5
+```
+
+Potência:
+
+```{r}
+2 ^ 2
+```
+
+Divisão inteira (sem resto):
+
+```{r}
+16 %/% 5
+```
+
+Resto da divisão:
+
+```{r}
+16 %% 5
+```
