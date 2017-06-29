@@ -11,11 +11,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # O básico do R
 
+Nesta primeira parte do minicurso serão apresentadas 
+
 ## Referências para estudo
 
-Antes de iniciar o conteúdo proriamente dito do curso, vale comentar sobre algumas boas referências disponíveis na internet para auto-estudo (fundamental para o aprendizado de qualquer linguagem de programação!):
+Antes de iniciar o conteúdo proriamente dito do curso, vale comentar sobre algumas boas referências disponíveis na internet para estudo posterior:
 
-- Livro [R for Data Science](http://r4ds.had.co.nz/)
+- Livro [R for Data Science](http://r4ds.had.co.nz/) 
 - [_Cheatsheets_ do RStudio](https://www.rstudio.com/resources/cheatsheets/)
 
 ## Operações matemáticas e vetores atômicos
@@ -63,6 +65,50 @@ Resto da divisão:
 ```{r}
 16 %% 5
 ```
+Para criar uma sequência simples de números no R, basta utilizar o operador ":". Ele cria um vetor em sua forma mais simples:
+
+```{r}
+1:6
+```
+Pode até ser divertido utilizar o R como uma calculadora, mas sua principal virtude está em criar todo o tipo de objeto. Dos mais simples aos mais complexos. Talvez sua versão mais simples seja o que conhecemos como "variável" do ensino básico. Isto é:
+
+```{r}
+x <- 15
+```
+Note que pode-se utilizar tanto o operador "<-" como "=":
+
+```{r}
+x = 15
+```
+Note ainda que, diferentemente dos casos anteriores, não apareceu "resultado" da operação logo após a execução do comando. Para imprimir o valor de uma variável no console basta digitar seu nome:
+
+```{r}
+x
+```
+Em alguns casos, é necessário utilizar a função _print_, que "imprime" o resultado no console:
+
+```{r}
+print(x)
+```
+Criando uma nova variável, é possível realizar operações como as que realizamos anteriormente com números:
+
+```{r}
+y <- 5
+
+x + y
+x - y
+x / y
+x * y
+```
+Novamente, é possível criar objetos que armazenem o resultado dessas operações. Veja os exemplos:
+
+```{r}
+z1 <- 42 / 3
+z2 <- x + y
+z3 <- ((x / 5 ) * 9) + 32
+```
+
+
 
 
 
