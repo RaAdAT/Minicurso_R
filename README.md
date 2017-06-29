@@ -1,6 +1,6 @@
 # Minicurso de introdução ao R - FEA/USP 2017
 
-## Responsável: Rafael Alves de Albuquerque Tavares
+### Responsável: Rafael Alves de Albuquerque Tavares
 
 ## Objetivos
 
