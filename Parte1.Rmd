@@ -20,6 +20,20 @@ Antes de iniciar o conteúdo proriamente dito do curso, vale comentar sobre algu
 - Livro [R for Data Science](http://r4ds.had.co.nz/) 
 - [_Cheatsheets_ do RStudio](https://www.rstudio.com/resources/cheatsheets/)
 
+## O básico do básico
+
+Uma grande vantagem de se utilizar programas como o R, Matlab e Stata para analisar dados é a possibilidade de documentar o "passo-a-passo" de uma sequência de operações realizadas. No R, o arquivo que documenta trabalhos é o _script_, que tem extensão ".R". 
+
+A ideia aqui é que acompanhe o conteúdo apresentado no minicurso colocando as operações em seu próprio script. Tente mantê-lo organizado! 
+
+Para fazer comentários no _script_ (ou garantir que o R não "lerá" como uma operação a ser feita), basta utilizar "#" no início da linha:
+
+```{r}
+# Esta linha contém um comentário
+# A próxima linha não contém um comentário 
+5
+```
+
 ## Operações matemáticas e vetores atômicos
 
 O R serve como calculadora e realizar operações matemáticas é bem simples.
@@ -108,7 +122,13 @@ z2 <- x + y
 z3 <- ((x / 5 ) * 9) + 32
 ```
 
+É possível listar os objetos até então criados com a função _ls()_:
 
+```{r}
+ls()
+```
+
+Até agora, só foram apresentados objetos que sejam vetores atômicos. Ainda, todos eles de classe númerica. Há 
 
 
 
