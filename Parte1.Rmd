@@ -9,13 +9,18 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Começando do zero
+# O básico do R
 
+## Referências para estudo
 
+Antes de iniciar o conteúdo proriamente dito do curso, vale comentar sobre algumas boas referências disponíveis na internet para auto-estudo (fundamental para o aprendizado de qualquer linguagem de programação!):
+
+- Livro [R for Data Science](http://r4ds.had.co.nz/)
+- [_Cheatsheets_ do RStudio](https://www.rstudio.com/resources/cheatsheets/)
 
 ## Operações matemáticas e vetores atômicos
 
-O R serve como calculadora é bastante simples realizar operações matemáticas.
+O R serve como calculadora e realizar operações matemáticas é bem simples.
 
 Soma:
 
@@ -29,7 +34,7 @@ Subtração:
 15 - 5
 ```
 
-Multiplicação
+Multiplicação:
 
 ```{r}
 15 * 5
@@ -58,3 +63,6 @@ Resto da divisão:
 ```{r}
 16 %% 5
 ```
+
+
+
