@@ -122,13 +122,28 @@ z2 <- x + y
 z3 <- ((x / 5 ) * 3) + 10
 ```
 
-É possível listar os objetos até então criados com a função _ls()_:
+É possível listar os objetos até então criados com a função _ls_:
 
 ```{r}
 ls()
 ```
 
-Até agora, só foram apresentados objetos que sejam vetores atômicos. Ainda, todos eles de classe númerica. Há 
+Até agora, só foram apresentados objetos que sejam vetores atômicos. Ainda, todos eles de *classe* númerica. Há, entretanto, três classes principais de vetores atômicos:
+
+```{r}
+numero <- 10
+texto <- "Texto"
+logico <- TRUE
+```
+É possível examinar a classe de cada um dos objetos com a função _class_:
+
+```{r}
+class(numero)
+class(texto)
+class(logico)
+```
+## Vetores
+
 
 
 
