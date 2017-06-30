@@ -190,5 +190,6 @@ var(litros_cafe)
 median(litros_cafe)
 max(litros_cafe)
 min(litros_cafe)
-quantile(litros_cafe, probs = c(0, 0.25, 0.5, 0.75, 1))
+quantile(litros_cafe, probs = c(0, 0.2, 0.4, 0.6, .8))
 ```
+Note que a função _quantile_ requer um segundo argumento que indica os quantis a serem reportados. Caso não indiquem o segundo argumento "_probs_", serão reportados os seguintes quantis: 0%, 25%, 50%, 75% e 100%.
