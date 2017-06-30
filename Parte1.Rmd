@@ -119,7 +119,7 @@ Novamente, é possível criar objetos que armazenem o resultado dessas operaçõ
 ```{r}
 z1 <- 42 / 3
 z2 <- x + y
-z3 <- ((x / 5 ) * 3) + 10
+z3 <- ((x / 5 ) * 9) + 32
 ```
 
 É possível listar os objetos até então criados com a função _ls_:
@@ -152,7 +152,43 @@ Para criar vetores de dimensão maior que 1, é preciso utilizar a função _c_,
 
 ```{r}
 vetor_numerico <- c(42, 7, 999, 3.14)
-vetor_texto <- c("sim", "a", '10', "Miriam", "TRUE")
+vetor_texto <- c("sim", "a", '10', "15", "TRUE")
 vetor_logico <- c(TRUE, FALSE, F, F, T)
 ```
+Operações matemáticas com vetores de dimensão maior que 1 seguem a mesma lógica de vetores atômicos. As operações são feitas para cada posição dos vetores (ao invés de operações matriciais):
 
+```{r}
+x <- c(1, 2)
+y <- c(3, 4)
+x * y
+```
+## Subconjunto de um vetor
+
+Uma parte muito importante da linguagem R é a capacidade de manipular com facilidade subconjuntos das informações disponíveis. Isto é, caso se queira obter apenas alguns elementos de um vetor, é preciso utilizar colchetes "[]" indicando as posições dos elementos. No caso de um vetor, há apenas uma dimensão a se percorrer. Alguns exemplos:
+
+```{r}
+x <- c(10, 20, 30, 40)
+x[2]
+x[3:4]
+x[c(2, 4)]
+```
+## Estatísticas descritivas de um vetor
+
+Fazer estatísticas descritivas de um vetor (ou de uma variável numa base de dados) é um processo bem simples. As funções são bem intuitivas (em inglês). Exemplo: meu consumo de litros de café por mês em 2017. Aproveitando, colocarei os nomes dos meses com a função _names_:
+
+```{r}
+litros_cafe <- c(4.3, 3.1, 5.3, 5.5, 6.9, 8.3)
+names(litros_cafe) <- c("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho")
+```
+A seguir: soma, media, desvio padrão, variância, mediana, máximo, mínimo e quantil, na respectiva ordem.
+
+```{r}
+sum(litros_cafe)
+mean(litros_cafe)
+sd(litros_cafe)
+var(litros_cafe)
+median(litros_cafe)
+max(litros_cafe)
+min(litros_cafe)
+quantile(litros_cafe, probs = c(0, 0.25, 0.5, 0.75, 1))
+```
