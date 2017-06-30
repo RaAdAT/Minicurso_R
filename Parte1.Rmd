@@ -50,6 +50,7 @@ As bases de dados utilizadas no R podem ser classificadas ou organizadas de acor
 | **2d**    | Matriz    |  Base de dados | 
 | **nd**    | _Array_   |                | 
 
+Neste minicurso, serão discutidos com mais calma os objetos de tipo "Vetor" e "Base de dados". Tal escolha parte do princípio de que os inscritos trabalharão prioritariamente com bases de dados. Além disso, como será visto, bases de dados são combinações de vários vetores.
 
 ## Operações matemáticas e vetores atômicos
 
