@@ -44,11 +44,11 @@ This gives rise to the five data types most often used in data analysis:
 As bases de dados utilizadas no R podem ser classificadas ou organizadas de acordo com sua (i) dimensionalidade (1d, 2d ou nd) e  (ii) se são homogêneas (todos os elementos são de mesmo tipo) ou heterogêneas (os elementos são de diferentes tipos). A partir desses parâmetros, pode-se classificar cinco tipos principais de bases de dados:
 
 
-|           | Homogêneo     | Heterogêneo    | 
-| :-------- |:------------: | :------------: |
-| **1d**    | Vetor Atômico |   Lista        | 
-| **2d**    | Matriz        |  Base de dados | 
-| **nd**    | _Array_       |                | 
+|           | Homogêneo | Heterogêneo    | 
+| :-------- |:--------: | :------------: |
+| **1d**    | Vetor     |   Lista        | 
+| **2d**    | Matriz    |  Base de dados | 
+| **nd**    | _Array_   |                | 
 
 
 ## Operações matemáticas e vetores atômicos
