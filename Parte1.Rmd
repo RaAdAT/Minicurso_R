@@ -172,6 +172,15 @@ x[2]
 x[3:4]
 x[c(2, 4)]
 ```
+É possível também definir um subconjunto a partir de um novo objeto. Por exemplo, criando um vetor lógico "uma_parte_de_x":
+
+```{r}
+uma_parte_de_x <- x > 15
+class(uma_parte_de_x)
+print(uma_parte_de_x)
+x[uma_parte_de_x]
+```
+
 ## Estatísticas descritivas de um vetor
 
 Fazer estatísticas descritivas de um vetor (ou de uma variável numa base de dados) é um processo bem simples. As funções são bem intuitivas (em inglês). Exemplo: meu consumo de litros de café por mês em 2017. Aproveitando, colocarei os nomes dos meses com a função _names_:
