@@ -128,22 +128,26 @@ z3 <- ((x / 5 ) * 3) + 10
 ls()
 ```
 
-Até agora, só foram apresentados objetos que sejam vetores atômicos. Ainda, todos eles de *classe* númerica. Há, entretanto, três classes principais de vetores atômicos:
+## Classes de vetores
+
+Há três *classes* principais de vetores:
 
 ```{r}
 numero <- 10
 texto <- "Texto"
 logico <- TRUE
 ```
-É possível examinar a classe de cada um dos objetos com a função _class_:
+É possível examinar a classe de cada um dos vetores atômicos criados com a função _class_:
 
 ```{r}
 class(numero)
 class(texto)
 class(logico)
 ```
-## Vetores
+Como os nomes sugerem, vetores de classe _numeric_ contêm números, vetores de classe _character_ contêm textos e vetores de classe _logical_ contêm valores lógicos (TRUE ou FALSE).
 
+## Vetores de maiores dimensôes
 
+Até agora, só foram apresentados objetos que sejam vetores atômicos
 
 
