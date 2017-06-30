@@ -15,10 +15,10 @@ Nesta primeira parte do minicurso serão apresentadas
 
 ## Referências para estudo
 
-Antes de iniciar o conteúdo proriamente dito do curso, vale comentar sobre algumas boas referências disponíveis na internet para estudo posterior:
+Antes de iniciar o conteúdo do curso propriamente dito, vale comentar sobre algumas boas referências disponíveis na internet para estudo posterior:
 
-- Livro [R for Data Science](http://r4ds.had.co.nz/) 
-- [_Cheatsheets_ do RStudio](https://www.rstudio.com/resources/cheatsheets/)
+- Livros [R for Data Science](http://r4ds.had.co.nz/) e [Advanced R](http://adv-r.had.co.nz/) : Bons livros para estudo do R. Sugiro começar pelo primeiro.
+- [_Cheatsheets_ do RStudio](https://www.rstudio.com/resources/cheatsheets/): Essa página contém resumos com comandos para diversos pacotes/operações do R. É uma boa fonte de consulta rápida. 
 
 ## O básico do básico
 
@@ -119,7 +119,7 @@ Novamente, é possível criar objetos que armazenem o resultado dessas operaçõ
 ```{r}
 z1 <- 42 / 3
 z2 <- x + y
-z3 <- ((x / 5 ) * 9) + 32
+z3 <- ((x / 5 ) * 3) + 10
 ```
 
 É possível listar os objetos até então criados com a função _ls()_:
