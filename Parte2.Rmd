@@ -1,0 +1,14 @@
+---
+title: "Parte 2 - Abrindo e manipulando bases de dados no R"
+author: "Rafael Tavares"
+date: "June 29, 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Abrindo e manipulando bases de dados no R
+
+
