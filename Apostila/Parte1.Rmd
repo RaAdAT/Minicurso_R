@@ -22,7 +22,7 @@ Antes de iniciar o conteúdo do curso propriamente dito, vale comentar sobre alg
 
 ## Interface do RStudio
 
-![RStudio](Minicurso_R/RStudio.PNG)
+![](Minicurso_R/RStudio.PNG)
 
 ## O Script
 
