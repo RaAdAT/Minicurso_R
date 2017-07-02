@@ -22,7 +22,7 @@ Antes de iniciar o conteúdo do curso propriamente dito, vale comentar sobre alg
 
 ## Interface do RStudio
 
-![](https://github.com/RaAdAT/Minicurso_R/blob/master/RStudio.PNG)
+![Figura 1](https://github.com/RaAdAT/Minicurso_R/blob/master/RStudio.PNG)
 
 ## O Script
 
