@@ -22,7 +22,14 @@ Antes de iniciar o conteúdo do curso propriamente dito, vale comentar sobre alg
 
 ## Interface do RStudio
 
-![Figura 1](https://github.com/RaAdAT/Minicurso_R/blob/master/RStudio.PNG)
+![RStudio](https://github.com/RaAdAT/Minicurso_R/blob/master/RStudio.PNG)
+
+![Script](https://github.com/RaAdAT/Minicurso_R/blob/master/Script.PNG)
+![Console](https://github.com/RaAdAT/Minicurso_R/blob/master/Console.PNG)
+![Environment](https://github.com/RaAdAT/Minicurso_R/blob/Environment.PNG)
+![Files/Help/Viewer/Plots](https://github.com/RaAdAT/Minicurso_R/blob/master/Help.PNG)
+
+
 
 ## O Script
 
