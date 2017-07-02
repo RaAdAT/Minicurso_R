@@ -26,7 +26,7 @@ Antes de iniciar o conteúdo do curso propriamente dito, vale comentar sobre alg
 
 ![Script](https://github.com/RaAdAT/Minicurso_R/blob/master/Script.PNG)
 ![Console](https://github.com/RaAdAT/Minicurso_R/blob/master/Console.PNG)
-![Environment](https://github.com/RaAdAT/Minicurso_R/blob/Environment.PNG)
+![Environment](https://github.com/RaAdAT/Minicurso_R/blob/master/Environment.PNG)
 ![Files/Help/Viewer/Plots](https://github.com/RaAdAT/Minicurso_R/blob/master/Help.PNG)
 
 
