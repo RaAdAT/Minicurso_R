@@ -341,4 +341,11 @@ quadrado <- function(x){
 quadrado(4)
 quadrado(10)
 ```
-Note que a função é definida como um objeto, em que o nome do objeto será o nome da função. O argumento da função fica entre parênteses e o corpo da função fica entre chaves. É utlizado o "_return_" para definir o valor a ser apresentado pelo R.
+Note que a função é definida como um objeto, em que o nome do objeto será o nome da função. O argumento da função fica entre parênteses e o corpo da função fica entre chaves. É utlizado o "_return_" para definir o valor a ser apresentado pelo R. Isto é, a função segue a seguinte estrutura:
+
+```{r}
+# nome da função <- function( nome dos argumentos ) {
+#   operação a ser feita
+#   restultado a ser apresentado
+# } 
+```
