@@ -1,15 +1,4 @@
----
-title: "Parte 1 - O básico do R"
-author: "Rafael Tavares"
-date: "June 29, 2017"
-output: pdf_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# O básico do R
+# Parte 1 - O básico do R
 
 Nesta primeira parte do minicurso serão apresentadas 
 
