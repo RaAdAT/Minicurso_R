@@ -265,7 +265,7 @@ Alguns exemplos de seu uso:
 
 ```{r}
 20 == 10
-(2 + 2) == (3 + 1)
+(2 + 2) != (3 + 1)
 5 <= 10
 "texto" == "Texto"
 "a" > "b"
@@ -286,5 +286,14 @@ O segundo tipo de operadores é conjunto de operadores lógicos, que servem para
 | Ou       | \|      |
 | Não      | !       |
 
+Alguns exemplos:
+
+```{r}
+(4 > 3) & (4 < 3) 
+(4 > 3) | (4 < 3)
+!(3 < 4)
+```
 ## Cláusulas condicionais
+
+# Operadores lógicos:
 
