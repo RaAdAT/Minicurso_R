@@ -343,6 +343,9 @@ quadrado(10)
 ```
 Note que a função é definida como um objeto, em que o nome do objeto será o nome da função. O argumento da função fica entre parênteses e o corpo da função fica entre chaves. É útil pensar as funções do R como as do ensino básico:
 
+![](http://bit.ly/2tGGakw) ou ![](http://bit.ly/2tGGik0)
+
+
 $$f(x) = x^{2}$$
 
 ou $$y = x^{2}$$
