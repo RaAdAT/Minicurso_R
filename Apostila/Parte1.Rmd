@@ -1,6 +1,6 @@
 # Parte 1 - O básico do R
 
-Nesta primeira parte do minicurso serão apresentadas 
+A ideia dessa primeira parte é comentar sobre os principais elementos fundamentais da linguagem R. Pode-se pensar também como uma apresentação dos principais vocábulos da linguagem.
 
 ## Referências para estudo
 
