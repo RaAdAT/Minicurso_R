@@ -55,8 +55,15 @@ setwd()
 ```
 
 ## Pacotes no R
+O R é fundamentalmente baseado na contribuição de seus usuários. Portanto, é parte da rotina de programação no R instalar e carregar pacotes. Os comandos para instalar e carregar pacotes são, respectivamente:
 
-# Tipos de elementos do R
+```{r}
+install.packages("dplyr")
+library(dplyr)
+```
+Note que é necessário o uso de aspas para o comando de instalação de pacotes. Quanto ao carregamento de pacotes, o uso de aspas é opcional.
+
+## Tipos de elementos do R
 
 Há dois tipos de elementos do R:
 - Objetos
