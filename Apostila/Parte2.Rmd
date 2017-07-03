@@ -10,3 +10,19 @@ Bases de dados podem ser entendidas como um conjunto de vetores para de mesmo ta
 | Carla  | 22    |  TRUE | 
 | Pedro  | 35    | FALSE | 
 
+Construindo essa base de dados no R, tem-se:
+
+```{r}
+Nome   <- c("João", "Ana", "Luiz", "Carla", "Pedro")
+Idade  <- c(27, 18, 21, 22, 35)
+Mulher <- c(FALSE, TRUE, FALSE, TRUE, FALSE)
+
+base_de_dados <- data.frame(Nome, Idade, Mulher)
+print(base_de_dados)
+```
+
+Para acessar os antigos vetores criados (agora variáveis da base dados), basta escrever "nome da base de dados"$"nome da variável". Por exemplo:
+
+```{r}
+print(base_de_dados$Nome)
+```
