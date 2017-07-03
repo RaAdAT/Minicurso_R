@@ -11,7 +11,7 @@ Antes de iniciar o conteúdo do curso propriamente dito, vale comentar sobre alg
 
 ## Interface do RStudio
 
-A interface do RStudio é separada em quatro "janelas". A janela superior à esquerda é o  
+A interface do RStudio é separada em quatro "janelas": 
 - _Script_: documento em que se escreve uma rotina de operações no R
 - _Console_: scripts simples e resultados
 - _Workspace/Environment/History_: objetos/variáveis ativos e histórico de comandos realizados
