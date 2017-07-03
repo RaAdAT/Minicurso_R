@@ -26,7 +26,7 @@ A interface do RStudio é separada em quatro "janelas". A janela superior à esq
 - _Script_: documento em que se escreve uma rotina de operações no R
 - _Console_: Scripts simples e resultados
 - _Workspace/Environment/History_: Objetos/variáveis ativos e histórico de comandos realizados
-- _Files/Plots/Packages/Help_: É utilizado para pesquisar sobre funções, pacotes. Além disso, é possível visualizar figuras
+- _Files/Plots/Packages/Help/Viewer_: É utilizado para pesquisar sobre funções, pacotes. Além disso, é possível visualizar figuras
 
 ![RStudio](https://github.com/RaAdAT/Minicurso_R/blob/master/RStudio.PNG)
 
