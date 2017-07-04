@@ -104,6 +104,25 @@ Para fins do minicurso, será utilizado um exemplo com um arquivo .csv, mas o ex
 
 ### Baixando dados da internet
 
+É possível baixar dados da internet diretamente do R. É bom checar o _working directory_, afinal é para lá que o arquivo baixado irá.
+
+```{r}
+getwd()
+```
+
+Colocando os links das bases de dados em objetos:
+
+```{r}
+url_munic <- "https://github.com/RaAdAT/Minicurso_R/blob/master/Base_MUNIC_2015.xls"
+url_finbra  <- "https://github.com/RaAdAT/Minicurso_R/blob/master/despesa_natureza.csv"
+```
+Há um comando específico para baixar arquivos da internet: o _download.file_. Há dois argumentos básicos nele: o url e o nome do arquivo de destino:
+
+```{r}
+download.file(url_finbra, Base_MUNIC_2015.xls)
+download.file(url_finbra, "despesa_natureza.csv")
+```
+
 O _link_ para os dados da 
 
 Eis o exemplo, com dados da Pesquisa de Informações Básicas Municipais (MUNIC) de 2015:
