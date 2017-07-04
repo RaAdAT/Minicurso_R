@@ -89,7 +89,8 @@ Há dois pacotes que armazenam funções de importação dentro do _tidyverse_: 
 
 O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, txt, etc.). Algumas de suas funções são:
 
-- **_read_csv( )_**: arquivos csv (comma separated files)
+- **_read_csv( )_**: arquivos csv (separador: ,)
+- **_read_csv()_**: arquivos csv (separador: ;)
 - **_read_tsv( )_**: arquivos separados por tab
 - **_read_delim( )_**: arquivos com delimitador genérico
 - **_read_fwf( )_**: arquivos de largura fixa
@@ -100,7 +101,18 @@ O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .
 
 - **_read_excel()_**: arquivos xls ou xlsx
 
-Para fins do minicurso, será utilizado um exemplo com um arquivo .csv, mas o exemplo é facilmente transbordado para outras extensões. Os dados estão disponíveis no próprio repositório.
+Apesar fazer parte do tidyverse, o pacote **readxl** não é carregado diretamente pelo _tidyverse_. Então:
+```{r}
+install.packages("readxl") 
+library(readxl)
+```
+
+Para fins do minicurso, serão utilizadas duas bases de dados como exemplo: 
+
+- Dados da Pesquisa de Informações Básicas Municipais (MUNIC) de 2015 em formato .xls
+- Dados de despesas por natureza da despesa das Finanças Públicas Municipais (FINBRA) em formato .csv
+
+O uso dos comandos é facilmente transbordável para arquivos com outras extensões. Os dados estão disponíveis no próprio repositório.
 
 ### Baixando dados da internet
 
@@ -113,23 +125,23 @@ getwd()
 Colocando os links das bases de dados em objetos:
 
 ```{r}
-url_munic <- "https://github.com/RaAdAT/Minicurso_R/blob/master/Base_MUNIC_2015.xls"
-url_finbra  <- "https://github.com/RaAdAT/Minicurso_R/blob/master/despesa_natureza.csv"
+url_munic <- "https://github.com/RaAdAT/Minicurso_R/raw/master/Base_MUNIC_2015.xls"
+url_finbra  <- "https://github.com/RaAdAT/Minicurso_R/raw/master/despesa_natureza.csv"
 ```
+
 Há um comando específico para baixar arquivos da internet: o _download.file_. Há dois argumentos básicos nele: o url e o nome do arquivo de destino:
 
 ```{r}
-download.file(url_finbra, Base_MUNIC_2015.xls)
+download.file(url_munic, "Base_MUNIC_2015.xls")
 download.file(url_finbra, "despesa_natureza.csv")
 ```
 
-O _link_ para os dados da 
+Uma vez baixados os dados, é possível importar os arquivos com as funções _read_csv_ e _read_excel_:
 
-Eis o exemplo, com dados da Pesquisa de Informações Básicas Municipais (MUNIC) de 2015:
-
-read_delim(file1, delim = ",", col_types = "cicid")
-
-
+```{r}
+base_munic  <- read_excel("Base_MUNIC_2015.xls", "Recursos humanos", col_names = T, na = "-")
+base_finbra <- read_csv2("despesa_natureza.csv", quote = "", col_names = T, skip = 3, locale)
+```
 
 ## Manipulação de dados com o tidyverse
 
