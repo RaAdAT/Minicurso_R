@@ -54,7 +54,7 @@ Comentários são peça-chave de um bom script. Com eles é possível comunicar 
 ```
 ### Diretório de trabalho
 
-Outra forma de organizar o script e o trabalho realizado por ele é definir o diretório de trabalho (_working directory_) que será utilizado pelo R para importar/exportar arquivos. É possível também perguntar ao R qual o diretório atual de trabalho. As funções são bem intuitivas: _getwd_ (diretório atual) e _setwd_ (definir diretório)
+Outra forma de organizar o script e o trabalho realizado por ele é definir o diretório de trabalho (wd: working directory) que será utilizado pelo R para importar/exportar arquivos. É possível também perguntar ao R qual o diretório atual de trabalho. As funções são bem intuitivas: _getwd_ (diretório atual) e _setwd_ (definir diretório)
 
 ```{r}
 getwd()
