@@ -23,7 +23,7 @@ A interface do RStudio é separada em quatro "janelas":
 
 Uma grande vantagem de se utilizar programas como o R, Matlab e Stata para analisar dados é a possibilidade de documentar o "passo-a-passo" de uma sequência de operações realizadas. No R, o arquivo que documenta trabalhos é o _script_, que tem extensão ".R". 
 
-A ideia aqui é que acompanhe o conteúdo apresentado no minicurso colocando as operações em seu próprio script. Tente mantê-lo organizado! 
+A ideia aqui é que se acompanhe o conteúdo apresentado no minicurso colocando as operações em seu próprio script. Afinal, a rotina de uso do programa será basicamente escrever _scripts_. Tente mantê-lo organizado! 
 
 ### Comentários no script
 
