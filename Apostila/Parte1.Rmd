@@ -35,7 +35,7 @@ A interface do RStudio é separada em quatro "janelas":
 - **ls()**:   	     mostra as objetos criados
 - **rm(X)**: 	       remove o objeto X
 - **?X**:            visualiza o help referente ao comando X
-- **help(comando)**: igual ao anterior
+- **help(X)**: igual ao anterior
 
 ## O Script
 
