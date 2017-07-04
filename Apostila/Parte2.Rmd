@@ -40,6 +40,13 @@ A função _head_ apresenta as 6 primeiras linhas da base de dados:
 ```{r}
 head(base_de_dados)
 ```
+
+A função _tail_ apresenta as 6 últimas linhas da base de dados:
+
+```{r}
+tail(base_de_dados)
+```
+
 A função _str_ mostra a _classe_ de cada variável:
 
 ```{r}
@@ -52,6 +59,12 @@ Tais funções possuem argumentos que podem ser definidos explicitamente. Por ex
 
 ```{r}
 head(x = base_de_dados, n = 3)
+```
+
+Para reportar os argumentos que uma função possui, basta utilizar a função _args_. Para o exemplo acima:
+
+```{r}
+args(head)
 ```
 
 ## Abertura de bases de dados no R
