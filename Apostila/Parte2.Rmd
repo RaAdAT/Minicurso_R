@@ -83,12 +83,19 @@ library(tidyverse)
 ```
 Note que o pacote _tidyverse_ carrega, na verdade, um conjunto de pacotes: _dplyr_, _ggplot2_, _readr_, dentre outros. Os comandos utilizados daqui para frente serão baseados neles.
 
+### Importação de dados com _tidyverse_
 
-- **read_csv()**: comma separated (CSV) files
-- **read_tsv()**: tab separated files
-- **read_delim()**: general delimited files
-- **read_fwf()**: fixed width files
-- **read_table()**: tabular files where colums are separated by white-space.
-- **read_log()**: web log files
+Há dois pacotes que armazenam funções de importação dentro do _tidyverse_: o **_readr_** e o **_readxl_**. Os nomes das funções varia de acordo com a extensão do arquivo.
 
+O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, tsv, txt, etc.). Algumas de suas funções são (há 7 no total):
 
+- **read_csv()**: arquivos csv (comma separated files)
+- **read_tsv()**: arquivos separados por tab
+- **read_delim()**: arquivos com delimitador genérico
+- **read_fwf()**: arquivos de largura fixa
+- **read_table()**: arquivos de tabulação em que as colunas são separadas por espeço em branco
+- **read_log()**: arquivos em formato web log (registros de atividade de servidores)
+
+O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .xlsx, tipicamente do Microsoft Excel. Sua função é:
+
+- **_read_excel()_**: arquivos xls ou xlsx
