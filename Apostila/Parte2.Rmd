@@ -103,3 +103,17 @@ O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .
 Para fins do minicurso, será utilizado um exemplo com um arquivo .csv, mas o exemplo é facilmente transbordado para outras extensões. Eis o exemplo, com dados de 
 
 
+
+
+
+## Manipulação de dados com o tidyverse
+
+A manipulação de dados dentro do _tidyverse_ é feita com o pacote _dplyr_. Há cinco funções principais, que podem ser combinadas com diversas funções já existentes no R:
+
+- **_mutate()_**: adiciona novas variáveis como função das existentes (ou muda a própria variável)
+- **_select()_**: seleciona variáveis (colunas) com base em seus nomes
+- **_filter()_**: filtra observações (linhas) com base em seus valores
+- **_summarise()_**: reduz valores das observações a estatísticas
+- **_arrange()_**: muda a ordem das observações na base
+
+
