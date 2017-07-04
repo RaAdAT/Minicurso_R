@@ -93,9 +93,13 @@ O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (c
 - **read_tsv()**: arquivos separados por tab
 - **read_delim()**: arquivos com delimitador genérico
 - **read_fwf()**: arquivos de largura fixa
-- **read_table()**: arquivos de tabulação em que as colunas são separadas por espeço em branco
+- **read_table()**: arquivos de tabulação em que as colunas são separadas por espaço em branco
 - **read_log()**: arquivos em formato web log (registros de atividade de servidores)
 
 O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .xlsx, tipicamente do Microsoft Excel. Sua função é:
 
 - **_read_excel()_**: arquivos xls ou xlsx
+
+Para fins do minicurso, será utilizado um exemplo com um arquivo .csv, mas o exemplo é facilmente transbordado para outras extensões. Eis o exemplo, com dados de 
+
+
