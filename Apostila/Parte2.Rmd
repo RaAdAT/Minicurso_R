@@ -1,8 +1,5 @@
-# Abrindo e manipulando bases de dados no R
+# Bases de Dados
 
-
-
-# Base de dados
 Bases de dados podem ser entendidas como um conjunto de vetores para de mesmo tamanho, em que cada coluna da base de dados é um vetor. No exemplo abaixo é apresentada uma base de dados com três vetores: "Nome", "Idade" e "Mulher", com classes _character_, _numerical_ e _logical_, respectivamente:
 
 | Nome   | Idade | Mulher| 
@@ -20,7 +17,7 @@ Nome   <- c("João", "Ana", "Luiz", "Carla", "Pedro")
 Idade  <- c(27, 18, 21, 22, 35)
 Mulher <- c(FALSE, TRUE, FALSE, TRUE, FALSE)
 
-base_de_dados <- data.frame(Nome, Idade, Mulher)
+base_de_dados <- data.frame(Nome, Idade, Mulher, stringsAsFactors = FALSE)
 print(base_de_dados)
 ```
 
@@ -30,7 +27,38 @@ Para acessar os antigos vetores criados (agora variáveis da base dados), basta 
 print(base_de_dados$Nome)
 ```
 
+## Interação com a base de dados
+
+Há alguns comandos que permitem interagir visualmente com uma base de dados. Por exemplo, _View_ (note a letra maiúscula) mostra a base de dados inteira.
+
+```{r}
+View(base_de_dados)
+```
+
+A função _head_ apresenta as 6 primeiras linhas da base de dados:
+
+```{r}
+head(base_de_dados)
+```
+A função _str_ mostra a _classe_ de cada variável:
+
+```{r}
+str(base_de_dados)
+```
+
+### Argumentos das funções
+
+Tais funções possuem argumentos que podem ser definidos explicitamente. Por exemplo:
+
+```{r}
+head(x = base_de_dados, n = 3)
+```
+
+
+
 ## Abertura de bases de dados no R
 
 Criar bases de dados dentro do R é bem simples, mas de modo geral são importadas bases de dados já criadas que podem estar em diferentes formatos. Serão apresentados a seguir algumas funções do R de **importação de bases de dados**.
+
+
 
