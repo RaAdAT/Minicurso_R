@@ -74,3 +74,11 @@ Criar bases de dados dentro do R é bem simples, mas de modo geral são importad
 ### Biblioteca de pacotes _tidyverse_
 
 Até aqui todos os conteúdos apresentados foram baseados na biblioteca de pacotes nativa do R. Daqui em diante, serão utilizadas biblitecas não-nativas. Tal escolha tem uma origem prática: os comandos comumente utilizados para a abertura, manipulação e apresentação de dados no R são da biblioteca do [_tidyverse_](http://tidyverse.org/).
+
+Vale, portanto, instalar e carregar desde já essa biblioteca:
+
+```{r}
+install.packages("tidyverse") 
+library(tidyverse)
+```
+Note que o pacote _tidyverse_ carrega, na verdade, um conjunto de pacotes: _dplyr_, _ggplot2_, _readr_, dentre outros. Os comandos utilizados daqui para frente serão baseados neles. 
