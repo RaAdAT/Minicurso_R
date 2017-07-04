@@ -81,4 +81,14 @@ Vale, portanto, instalar e carregar desde já essa biblioteca:
 install.packages("tidyverse") 
 library(tidyverse)
 ```
-Note que o pacote _tidyverse_ carrega, na verdade, um conjunto de pacotes: _dplyr_, _ggplot2_, _readr_, dentre outros. Os comandos utilizados daqui para frente serão baseados neles. 
+Note que o pacote _tidyverse_ carrega, na verdade, um conjunto de pacotes: _dplyr_, _ggplot2_, _readr_, dentre outros. Os comandos utilizados daqui para frente serão baseados neles.
+
+
+- **read_csv()**: comma separated (CSV) files
+- **read_tsv()**: tab separated files
+- **read_delim()**: general delimited files
+- **read_fwf()**: fixed width files
+- **read_table()**: tabular files where colums are separated by white-space.
+- **read_log()**: web log files
+
+
