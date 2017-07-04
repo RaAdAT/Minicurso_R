@@ -54,8 +54,6 @@ Tais funções possuem argumentos que podem ser definidos explicitamente. Por ex
 head(x = base_de_dados, n = 3)
 ```
 
-
-
 ## Abertura de bases de dados no R
 
 Criar bases de dados dentro do R é bem simples, mas de modo geral são importadas bases de dados já criadas que podem estar em diferentes formatos. Serão apresentados a seguir algumas funções do R de **importação de bases de dados**.
