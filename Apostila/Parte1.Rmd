@@ -27,6 +27,16 @@ A interface do RStudio é separada em quatro "janelas":
 - **Crtl + l**:	            limpa o console
 - **Esc**: 	                interrompe execução
 
+## Alguns comandos úteis
+
+- **#**:             comentários na linha
+- **;**: 	           códigos na mesma linha
+- **{}**: 		       códigos em linhas distintas
+- **ls()**:   	     mostra as objetos criados
+- **rm(X)**: 	       remove o objeto X
+- **?X**:            visualiza o help referente ao comando X
+- **help(comando)**: igual ao anterior
+
 ## O Script
 
 Uma grande vantagem de se utilizar programas como o R, Matlab e Stata para analisar dados é a possibilidade de documentar o "passo-a-passo" de uma sequência de operações realizadas. No R, o arquivo que documenta trabalhos é o _script_, que tem extensão ".R". 
