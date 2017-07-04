@@ -225,6 +225,16 @@ x <- c(1, 2)
 y <- c(3, 4)
 x * y
 ```
+
+## Combinação de vetores
+
+É possível combinar vetores de forma a criar matrizes com as funções _cbind_ e _rowbind_:
+
+```{r}
+cbind(x,y)  #  combina vetores pela coluna
+rbind(x,y)  #  combina vetores pela linha
+```
+
 ## Subconjunto de um vetor
 
 Uma parte muito importante da linguagem R é a capacidade de manipular com facilidade subconjuntos das informações disponíveis. Isto é, caso se queira obter apenas alguns elementos de um vetor, é preciso utilizar colchetes "[]" indicando as posições dos elementos. No caso de um vetor, há apenas uma dimensão a se percorrer. Alguns exemplos:
