@@ -344,9 +344,21 @@ if (x < 0){
     print("x já é positivo")
 }
 ```
-Note que a condição a ser atendida deve estar entre parênteses. A operação a ser realizada deve estar entre chaves. No primeiro exemplo, foi dada apenas uma instrução, que é realizada caso "(x<0)". No segundo exemplo, há uma segunda instrução para quando "(x<0)" não é atendida.
+Note que a condição a ser atendida deve estar entre parênteses. A operação a ser realizada deve estar entre chaves "{}". No primeiro exemplo, foi dada apenas uma instrução, que é realizada caso "(x<0)". No segundo exemplo, há uma segunda instrução para quando "(x<0)" não é atendida.
 
-## Repetição de operações
+## Repetição de operações: _while_
+
+É útil colocar o computador para realizar tarefas repetitivas, já que isso pode ser feito a um custo bem baixo. Um dos operadores do R para tanto é o _while_. Com ele uma determinada tarefa é realizada enquanto uma determinada condição for satisteita. Por exemplo:
+
+```{r}
+i <- 1
+while (i <= 10){
+  print(i)
+   i <- i + 1
+}
+```
+
+## Repetição de operações: _for_
 
 Outro elemento importante para a criação de funções é o _for_ loop. Com ele é possível realizar a tarefa entre chaves "{}" para casos específicos. Por exemplo:
 
