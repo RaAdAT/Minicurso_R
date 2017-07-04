@@ -89,12 +89,12 @@ Há dois pacotes que armazenam funções de importação dentro do _tidyverse_: 
 
 O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, tsv, txt, etc.). Algumas de suas funções são (há 7 no total):
 
-- **read_csv()**: arquivos csv (comma separated files)
-- **read_tsv()**: arquivos separados por tab
-- **read_delim()**: arquivos com delimitador genérico
-- **read_fwf()**: arquivos de largura fixa
-- **read_table()**: arquivos de tabulação em que as colunas são separadas por espaço em branco
-- **read_log()**: arquivos em formato web log (registros de atividade de servidores)
+- **_read_csv( )_**: arquivos csv (comma separated files)
+- **_read_tsv( )_**: arquivos separados por tab
+- **_read_delim( )_**: arquivos com delimitador genérico
+- **_read_fwf( )_**: arquivos de largura fixa
+- **_read_table( )_**: arquivos de tabulação em que as colunas são separadas por espaço em branco
+- **_read_log( )_**: arquivos em formato web log (registros de atividade de servidores)
 
 O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .xlsx, tipicamente do Microsoft Excel. Sua função é:
 
