@@ -87,7 +87,7 @@ Note que o pacote _tidyverse_ carrega, na verdade, um conjunto de pacotes: _dply
 
 Há dois pacotes que armazenam funções de importação dentro do _tidyverse_: o **_readr_** e o **_readxl_**. Os nomes das funções varia de acordo com a extensão do arquivo.
 
-O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, tsv, txt, etc.). Algumas de suas funções são (há 7 no total):
+O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, txt, etc.). Algumas de suas funções são:
 
 - **_read_csv( )_**: arquivos csv (comma separated files)
 - **_read_tsv( )_**: arquivos separados por tab
@@ -100,9 +100,15 @@ O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .
 
 - **_read_excel()_**: arquivos xls ou xlsx
 
-Para fins do minicurso, será utilizado um exemplo com um arquivo .csv, mas o exemplo é facilmente transbordado para outras extensões. Eis o exemplo, com dados de 
+Para fins do minicurso, será utilizado um exemplo com um arquivo .csv, mas o exemplo é facilmente transbordado para outras extensões. Os dados estão disponíveis no próprio repositório.
 
+### Baixando dados da internet
 
+O _link_ para os dados da 
+
+Eis o exemplo, com dados da Pesquisa de Informações Básicas Municipais (MUNIC) de 2015:
+
+read_delim(file1, delim = ",", col_types = "cicid")
 
 
 
@@ -110,10 +116,10 @@ Para fins do minicurso, será utilizado um exemplo com um arquivo .csv, mas o ex
 
 A manipulação de dados dentro do _tidyverse_ é feita com o pacote _dplyr_. Há cinco funções principais, que podem ser combinadas com diversas funções já existentes no R:
 
-- **_mutate()_**: adiciona novas variáveis como função das existentes (ou muda a própria variável)
-- **_select()_**: seleciona variáveis (colunas) com base em seus nomes
-- **_filter()_**: filtra observações (linhas) com base em seus valores
-- **_summarise()_**: reduz valores das observações a estatísticas
-- **_arrange()_**: muda a ordem das observações na base
+- **_mutate( )_**: adiciona novas variáveis como função das existentes (ou muda a própria variável)
+- **_select( )_**: seleciona variáveis (colunas) com base em seus nomes
+- **_filter( )_**: filtra observações (linhas) com base em seus valores
+- **_summarise( )_**: reduz valores das observações a estatísticas
+- **_arrange( )_**: muda a ordem das observações na base
 
 
