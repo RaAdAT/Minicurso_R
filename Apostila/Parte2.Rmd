@@ -71,5 +71,6 @@ args(head)
 
 Criar bases de dados dentro do R é bem simples, mas de modo geral são importadas bases de dados já criadas que podem estar em diferentes formatos. Serão apresentados a seguir algumas funções do R de **importação de bases de dados**.
 
+### Biblioteca de pacotes _tidyverse_
 
-
+Até aqui todos os conteúdos apresentados foram baseados na biblioteca de pacotes nativa do R. Daqui em diante, serão utilizadas biblitecas não-nativas. Tal escolha tem uma origem prática: os comandos comumente utilizados para a abertura, manipulação e apresentação de dados no R são da biblioteca do [_tidyverse_](http://tidyverse.org/).
