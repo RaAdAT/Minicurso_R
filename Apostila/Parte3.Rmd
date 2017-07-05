@@ -2,7 +2,7 @@
 
 ## Criação de estatísticas descritivas com _tidyverse_
 
-### Tabela com a proporcao media de gastos com pessoal UF:
+### Tabela com a proporçãoo média de gastos com pessoal UF:
 
 ```{r}
 prop_pessoal_uf <- base_final %>% group_by(uf) %>% summarise(prop_pessoal = mean(prop_desp_pessoal, na.rm = TRUE))
@@ -20,10 +20,14 @@ total_pessoal_uf <- base_final %>% group_by(uf) %>% summarise(total_pessoal = me
 prop_pessoal_med_uf <- base_final %>% group_by(uf) %>% summarise(prop_med_pessoal = median(prop_desp_pessoal, na.rm = TRUE))
 ```
 
-### Tabela com as três estatísticas descritivas:
+### Tabela com várias estatísticas descritivas:
 
 ```{r}
 estat_desc_uf <- base_final %>% group_by(uf) %>% summarise(prop_pessoal = mean(prop_desp_pessoal, na.rm = TRUE),
-                                                             med_pessoal = median(prop_desp_pessoal, na.rm = TRUE),
-                                                             total_pessoal = sum(despesa_pessoal, na.rm = TRUE))
+                                                           med_pessoal = median(prop_desp_pessoal, na.rm = TRUE),
+                                                           min_pessoal = min(prop_desp_pessoal, na.rm = TRUE),
+                                                           max_pessoal = max(prop_desp_pessoal, na.rm = TRUE),
+                                                           total_pessoal = sum(despesa_pessoal, na.rm = TRUE))
 ```
+
+
