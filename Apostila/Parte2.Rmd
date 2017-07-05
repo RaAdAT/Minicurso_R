@@ -89,13 +89,13 @@ Há dois pacotes que armazenam funções de importação dentro do _tidyverse_: 
 
 O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, txt, etc.). Algumas de suas funções são:
 
-- `read_csv( )`: arquivos csv (separador: ,)
+- `read_csv()`: arquivos csv (separador: ,)
 - `read_csv2()`: arquivos csv (separador: ;)
-- `read_tsv( )`: arquivos separados por tab
-- `read_delim( )`: arquivos com delimitador genérico
-- `read_fwf( )`: arquivos de largura fixa
-- `read_table( )`: arquivos de tabulação em que as colunas são separadas por espaço em branco
-- `read_log( )`: arquivos em formato web log (registros de atividade de servidores)
+- `read_tsv()`: arquivos separados por tab
+- `read_delim()`: arquivos com delimitador genérico
+- `read_fwf()`: arquivos de largura fixa
+- `read_table()`: arquivos de tabulação em que as colunas são separadas por espaço em branco
+- `read_log()`: arquivos em formato web log (registros de atividade de servidores)
 
 O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .xlsx, tipicamente do Microsoft Excel. Sua função é:
 
@@ -147,11 +147,11 @@ base_finbra <- read_csv2("despesa_natureza.csv", quote = "", col_names = T, skip
 
 A manipulação de dados dentro do _tidyverse_ é feita com o pacote _dplyr_. Há cinco funções principais, que podem ser combinadas com diversas funções já existentes no R:
 
-- `mutate( )`: adiciona novas variáveis como função das existentes (ou muda a própria variável)
-- `select( )`: seleciona variáveis (colunas) com base em seus nomes
-- `filter( )`: filtra observações (linhas) com base em seus valores
-- `summarise( )`: reduz valores das observações a estatísticas
-- `arrange( )`: muda a ordem das observações na base
+- `mutate()`: adiciona novas variáveis como função das existentes (ou muda a própria variável)
+- `select()`: seleciona variáveis (colunas) com base em seus nomes
+- `filter()`: filtra observações (linhas) com base em seus valores
+- `summarise()`: reduz valores das observações a estatísticas
+- `arrange()`: muda a ordem das observações na base
 
 #### Operador pipe (%>%)
 
@@ -238,10 +238,10 @@ base_nova <- x_join(base_esquerda, base_direita, by = "identificador")
 ```
 O elemento relevante aqui é o "identificador". Para fazer sentido juntar duas bases de dados, é necessário que haja alguma variável em comum. Dentre as principais funções disponíveis, há:
 
-- **_left_join( )_**: Mantém todas as observações da _base_esquerda_
-- **_right_join( )_**: Mantém todas as observações da _base_direita_
-- **_inner_join( )_**: Mantém todas as observações estejam nas duas bases (simultaneamente)
-- **_full_join( )_**: Mantém todas as observações
+- `left_join()`: Mantém todas as observações da _base_esquerda_
+- `right_join()`: Mantém todas as observações da _base_direita_
+- `inner_join()`: Mantém todas as observações estejam nas duas bases (simultaneamente)
+- `full_join()`: Mantém todas as observações
 
 Para o exemplo, será utilizado o `inner_join`, apenas para garantir que todos os municípios da base tenham toda a informação disponível:
 
