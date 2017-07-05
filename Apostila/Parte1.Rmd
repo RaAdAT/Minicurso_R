@@ -349,7 +349,7 @@ Note que a condição a ser atendida deve estar entre parênteses. A operação 
 
 ## Repetição de operações: _while_
 
-É útil colocar o computador para realizar tarefas repetitivas, já que isso pode ser feito a um custo bem baixo. Um dos operadores do R para tanto é o _while_. Com ele uma determinada tarefa é realizada enquanto uma determinada condição for satisteita. Por exemplo:
+É útil colocar o computador para realizar tarefas repetitivas, já que isso pode ser feito a um custo bem baixo. Um dos operadores do R para tanto é o `while`. Com ele uma determinada tarefa é realizada enquanto uma determinada condição for satisteita. Por exemplo:
 
 ```{r}
 i <- 1
