@@ -153,6 +153,10 @@ A manipulação de dados dentro do _tidyverse_ é feita com o pacote _dplyr_. H�
 - **_summarise( )_**: reduz valores das observações a estatísticas
 - **_arrange( )_**: muda a ordem das observações na base
 
+#### Operador pipe (%>%)
+
+O **pipe** (**%>%**) é um operador específico do _tidyverse_, que permite conectar uma sequência de operações. Elé é incrivelmente útil e deixa o script "limpo". Logo abaixo há um exemplo que deixa mais claro o seu papel.
+
 ### Manipulação da base de despesas municipais da FINBRA 
 
 Uma breve olhada na base de dados da FINBRA com as funções _View_ ou _head_ permite notar que ela está bem diferente de uma base de dados "padrão", como mostrado no início dessa segunda parte da apostila. Em particular, é possível ver que para cada munícipio há várias linhas com rubricas de despesa. O ideal é resolver o problema por partes.
@@ -169,7 +173,19 @@ Para entender o que foi feito:
 # nova base de dados <- base de dados original %>% manipulação dos dados
 ```
 
-#### Operador pipe (%>%)
+Segundo, é preciso manter apenas as variáveis úteis. A função do _dplyr_ para tanto é a _select_:
 
-O **pipe** (**%>%**) é um operador específico do tidyverse, que permite conectar uma sequência de operações. Elé é incrivelmente útil e deixa o script "limpo".
+```{r}
+base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
+```
+
+É hora de rearranjar a base de dados de modo a deixá-la com uma observação por município. Espera-se que ela fique assim (obviamente os valores não são reais):
+
+| Município  | Despesa total | Despesa de pessoal| 
+| ---------- |:-------------:| --------------:   |
+| São Paulo  | 100           | 80                | 
+| Osasco     | 50            |  30               | 
+| Vitória    | 30            | 20                | 
+| Vila Velha | 20            | 15                |
+
 
