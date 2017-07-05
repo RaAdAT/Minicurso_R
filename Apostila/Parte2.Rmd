@@ -192,7 +192,7 @@ base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
 É hora de rearranjar a base de dados de modo a deixá-la com uma observação por município. Espera-se que ela fique assim :
 
 | Município  | Despesa total | Despesa de pessoal| 
-| ---------- |:-------------:| : --------------: |
+| ---------- |: -----------: | : --------------: |
 | São Paulo  | 100           | 80                | 
 | Osasco     | 50            | 30                | 
 | Vitória    | 30            | 20                | 
