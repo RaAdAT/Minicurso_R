@@ -125,7 +125,7 @@ getwd()
 Colocando os links das bases de dados em objetos:
 
 ```{r}
-url_munic <- "https://github.com/RaAdAT/Minicurso_R/raw/master/Base_MUNIC_2015.xls"
+url_munic <- "https://github.com/RaAdAT/Minicurso_R/raw/master/base_munic_2015.xlsx"
 url_finbra  <- "https://github.com/RaAdAT/Minicurso_R/raw/master/despesa_natureza.csv"
 ```
 
@@ -139,7 +139,7 @@ download.file(url_finbra, "despesa_natureza.csv")
 Uma vez baixados os dados, é possível importar os arquivos com as funções _read_csv_ e _read_excel_:
 
 ```{r}
-base_munic  <- read_excel("Base_MUNIC_2015.xls", "Recursos humanos", col_names = T, na = "-")
+base_munic  <- read_excel("base_munic_2015.xlsx", "Recursos humanos", col_names = T)
 base_finbra <- read_csv2("despesa_natureza.csv", quote = "", col_names = T, skip = 3, locale = locale(encoding = "latin1"))
 ```
 
@@ -190,21 +190,6 @@ base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
 
 É hora de rearranjar a base de dados de modo a deixá-la com uma observação por município. Espera-se que ela fique assim :
 
-| Município  | Despesa total | Despesa de pessoal | 
-| ---------- |: -----------: | : --------------:  |
-| São Paulo | 100           | 80                 | 
-| Osasco     | 50            | 30                 | 
-| Vitória    | 30            | 20                 | 
-| Vila Velha | 20            | 15                 |
-
-
-| Município  | Despesa total | Despesa de pessoal | 
-| ---------- |: -----------: | : --------------:  |
-| São Paulo  | 100           | 80                 | 
-| Osasco     | 50            | 30                 | 
-| Vitória    | 30            | 20                 | 
-| Vila Velha | 20            | 15                 |
-
 | Município  | Despesa total      | Despesa de pessoal | 
 | ---------- |:------------------:| :---: |
 | São Paulo  | 100      | 80   | 
@@ -225,4 +210,26 @@ Uma outra coisa útil de se fazer é renomear as variáveis, de forma a deixá-l
 base_finbra <- base_finbra %>% rename(cod_ibge = `Cod.IBGE`, despesa_total = `Total Despesa`, despesa_pessoal = `3.1.00.00.00.00 - Pessoal e Encargos Sociais`)
 ```
 
-Por fim, 
+Por fim, cria-se uma variável que dá uma ideia de quanto dos gastos dos mumicípios é voltado para gasto de pessoal:
+
+```{r}
+base_finbra <- base_finbra %>% mutate(prop_desp_pessoal = despesa_pessoal/despesa_total)
+```
+
+## Utilizando o pipe para fazer tudo de uma vez
+
+Para ter uma ideia de como o **pipe** pode ser útil, o código abaixo refaz a mesma sequência de operações, mas de uma só vez:
+
+```{r}
+rm(base_finbra)
+
+base_finbra <- read_csv2("despesa_natureza.csv", col_names = T, skip = 3, locale = locale(encoding = "latin1")) %>%
+               filter(Conta == "Total Despesa" | Conta == "3.1.00.00.00.00 - Pessoal e Encargos Sociais") %>%
+               select(Cod.IBGE, Conta, Valor) %>%
+               spread(Conta, Valor) %>%
+               rename(cod_ibge = `Cod.IBGE`, despesa_total = `Total Despesa`, despesa_pessoal = `3.1.00.00.00.00 - Pessoal e Encargos Sociais`) %>%
+               mutate(prop_desp_pessoal = despesa_pessoal/despesa_total)
+```
+
+Caso se queira saber do gasto de pessoal por funcionário, é preciso juntar as duas bases de dados (Munic e FINBRA). O _tidyverse_ também 
+
