@@ -76,7 +76,7 @@ Há dois tipos de elementos do R:
 - Objetos
 - Funções
 
-As funções são usadas para operar objetos, seja para criar objetos novos ou transformar o objeto original. Tipicamente uma função é escrita seguida de parenteses "()". Por exemplo:
+As funções são usadas para operar objetos, seja para criar objetos novos ou transformar o objeto original. Tipicamente uma função é escrita seguida de parenteses "( )". Por exemplo:
 
 ```{r}
 x <- 1
