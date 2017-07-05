@@ -90,16 +90,16 @@ Há dois pacotes que armazenam funções de importação dentro do _tidyverse_: 
 O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, txt, etc.). Algumas de suas funções são:
 
 - `read_csv( )`: arquivos csv (separador: ,)
-- **_read_csv2()_**: arquivos csv (separador: ;)
-- **_read_tsv( )_**: arquivos separados por tab
-- **_read_delim( )_**: arquivos com delimitador genérico
-- **_read_fwf( )_**: arquivos de largura fixa
-- **_read_table( )_**: arquivos de tabulação em que as colunas são separadas por espaço em branco
-- **_read_log( )_**: arquivos em formato web log (registros de atividade de servidores)
+- `read_csv2()`: arquivos csv (separador: ;)
+- `read_tsv( )`: arquivos separados por tab
+- `read_delim( )`: arquivos com delimitador genérico
+- `read_fwf( )`: arquivos de largura fixa
+- `read_table( )`: arquivos de tabulação em que as colunas são separadas por espaço em branco
+- `read_log( )`: arquivos em formato web log (registros de atividade de servidores)
 
 O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .xlsx, tipicamente do Microsoft Excel. Sua função é:
 
-- **_read_excel()_**: arquivos xls ou xlsx
+- `read_excel()`: arquivos xls ou xlsx
 
 Apesar fazer parte do tidyverse, o pacote **readxl** não é carregado diretamente pelo _tidyverse_. Então:
 ```{r}
@@ -129,14 +129,14 @@ url_munic <- "https://github.com/RaAdAT/Minicurso_R/raw/master/base_munic_2015.x
 url_finbra  <- "https://github.com/RaAdAT/Minicurso_R/raw/master/despesa_natureza.csv"
 ```
 
-Há um comando específico para baixar arquivos da internet: o _download.file_. Há dois argumentos básicos nele: o url e o nome do arquivo de destino:
+Há um comando específico para baixar arquivos da internet: o `download.file`. Há dois argumentos básicos nele: o url e o nome do arquivo de destino:
 
 ```{r}
 download.file(url_munic, "Base_MUNIC_2015.xls")
 download.file(url_finbra, "despesa_natureza.csv")
 ```
 
-Uma vez baixados os dados, é possível importar os arquivos com as funções _read_csv_ e _read_excel_:
+Uma vez baixados os dados, é possível importar os arquivos com as funções `read_csv` e `read_excel`:
 
 ```{r}
 base_munic  <- read_excel("base_munic_2015.xlsx", "Recursos humanos", col_names = T)
@@ -147,21 +147,21 @@ base_finbra <- read_csv2("despesa_natureza.csv", quote = "", col_names = T, skip
 
 A manipulação de dados dentro do _tidyverse_ é feita com o pacote _dplyr_. Há cinco funções principais, que podem ser combinadas com diversas funções já existentes no R:
 
-- **_mutate( )_**: adiciona novas variáveis como função das existentes (ou muda a própria variável)
-- **_select( )_**: seleciona variáveis (colunas) com base em seus nomes
-- **_filter( )_**: filtra observações (linhas) com base em seus valores
-- **_summarise( )_**: reduz valores das observações a estatísticas
-- **_arrange( )_**: muda a ordem das observações na base
+- `mutate( )`: adiciona novas variáveis como função das existentes (ou muda a própria variável)
+- `select( )`: seleciona variáveis (colunas) com base em seus nomes
+- `filter( )`: filtra observações (linhas) com base em seus valores
+- `summarise( )`: reduz valores das observações a estatísticas
+- `arrange( )`: muda a ordem das observações na base
 
 #### Operador pipe (%>%)
 
-O **pipe** (**%>%**) é um operador específico do _tidyverse_, que permite conectar uma sequência de operações. Elé é incrivelmente útil e deixa o script "limpo". Logo abaixo há um exemplo que deixa mais claro o seu papel.
+O **pipe** (`%>%`) é um operador específico do _tidyverse_, que permite conectar uma sequência de operações. Elé é incrivelmente útil e deixa o script "limpo". Logo abaixo há um exemplo que deixa mais claro o seu papel.
 
 ### Manipulação da base de despesas municipais da FINBRA 
 
 Suponha que a ideia da manipulação dos dados de despesas é saber como os municípios se comportam em termos de gastos de pessoal.
 
-Uma breve olhada na base de dados da FINBRA com as funções _View_ ou _head_ permite notar que ela está bem diferente de uma base de dados "padrão", como mostrado no início dessa segunda parte da apostila. Em particular, é possível ver que para cada munícipio há várias linhas com rubricas de despesa (obviamente os valores não são reais):
+Uma breve olhada na base de dados da FINBRA com as funções `View` ou `head` permite notar que ela está bem diferente de uma base de dados "padrão", como mostrado no início dessa segunda parte da apostila. Em particular, é possível ver que para cada munícipio há várias linhas com rubricas de despesa (obviamente os valores não são reais):
 
 | Município  | Conta              | Valor | 
 | ---------- |:------------------:| :---: |
@@ -170,7 +170,7 @@ Uma breve olhada na base de dados da FINBRA com as funções _View_ ou _head_ pe
 | Vitória    | Despesa Total      | 30    | 
 | Vitória    | Despesa de Pessoal | 20    |
 
-O ideal é resolver o problema por partes. Primeiro, é importante definir a informação considerada relevante. Como exemplo, quer-se manter aqui informações de despesa total e despesa de pessoal por município. Para manter apenas essas rubricas, é preciso "filtrar observações com base em seus valores" ou usar a função _filter_ do dplyr:
+O ideal é resolver o problema por partes. Primeiro, é importante definir a informação considerada relevante. Como exemplo, quer-se manter aqui informações de despesa total e despesa de pessoal por município. Para manter apenas essas rubricas, é preciso "filtrar observações com base em seus valores" ou usar a função `filter` do dplyr:
 
 ```{r}
 base_finbra <- base_finbra %>% filter(Conta == "Total Despesa" | Conta == "3.1.00.00.00.00 - Pessoal e Encargos Sociais")
@@ -182,7 +182,7 @@ Para entender o que foi feito:
 # nova base de dados <- base de dados original %>% manipulação dos dados
 ```
 
-Segundo, é preciso manter apenas as variáveis úteis. A função do _dplyr_ para tanto é a _select_:
+Segundo, é preciso manter apenas as variáveis úteis. A função do _dplyr_ para tanto é a `select`:
 
 ```{r}
 base_finbra <- base_finbra %>% select(Cod.IBGE, UF, Conta, Valor)
@@ -197,7 +197,7 @@ base_finbra <- base_finbra %>% select(Cod.IBGE, UF, Conta, Valor)
 | Vitória    | 30      | 20    | 
 | Vila Velha    | 20 | 15    |
 
-O pacote do _tidyverse_ que resolve esse problema é o _tidyr_. Ele tem duas funções importantes para o problema: _spread_ e _gather_, em que uma faz o inverso da outra. No caso em questão, usa-se _spread_:
+O pacote do _tidyverse_ que resolve esse problema é o _tidyr_. Ele tem duas funções importantes para o problema: `spread` e `gather`, em que uma faz o inverso da outra. No caso em questão, usa-se `spread`:
 
 ```{r}
 base_finbra <- base_finbra %>% spread(Conta, Valor)
@@ -231,7 +231,7 @@ base_finbra <- read_csv2("despesa_natureza.csv", col_names = T, skip = 3, locale
                mutate(prop_desp_pessoal = despesa_pessoal/despesa_total)
 ```
 
-Caso se queira saber do gasto de pessoal por funcionário, é preciso juntar as duas bases de dados (Munic e FINBRA). Com o _tidyverse_ também é possível fazê-lo através da família de funções _join_. Sua sintaxe é:
+Caso se queira saber do gasto de pessoal por funcionário, é preciso juntar as duas bases de dados (Munic e FINBRA). Com o _tidyverse_ também é possível fazê-lo através da família de funções `_join`. Sua sintaxe é:
 
 ```{r}
 base_nova <- x_join(base_esquerda, base_direita, by = "identificador")
@@ -243,7 +243,7 @@ O elemento relevante aqui é o "identificador". Para fazer sentido juntar duas b
 - **_inner_join( )_**: Mantém todas as observações estejam nas duas bases (simultaneamente)
 - **_full_join( )_**: Mantém todas as observações
 
-Para o exemplo, será utilizado o _inner_join_, apenas para garantir que todos os municípios da base tenham toda a informação disponível:
+Para o exemplo, será utilizado o `inner_join`, apenas para garantir que todos os municípios da base tenham toda a informação disponível:
 
 ```{r}
 base_final <- inner_join(base_munic, base_finbra , by = "cod_ibge")
