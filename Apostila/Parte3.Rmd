@@ -38,4 +38,34 @@ estat_desc_uf <- base_final %>% group_by(uf) %>% summarise(prop_pessoal = mean(p
                                                            total_pessoal = sum(despesa_pessoal, na.rm = TRUE))
 ```
 
+## Gráficos com o _tidyverse_
+
+O pacote do _tidyverse_ para a criação de gráficos é o _ggplot2_. Alguns exemplos:
+
+```{r}
+ggplot(data = base_final) +
+  geom_histogram(mapping = aes(x = prop_desp_pessoal*100, y = ..density..), binwidth = 0.5) +
+  geom_density(mapping = aes(x = prop_desp_pessoal*100), color = "blue") +
+  labs(x = "Proporção de gastos com pessoal (%)", y = "Densidade")
+
+ggplot(data = base_final) +
+  geom_histogram(mapping = aes(x = prop_desp_pessoal*100, y = ..density..), binwidth = 0.5) +
+  geom_density(mapping = aes(x = prop_desp_pessoal*100), color = "blue") +
+  labs(x = "Proporção de gastos com pessoal (%)", y = "Densidade")
+
+ggplot(data = estat_desc_uf) +
+  geom_boxplot(mapping = aes(x = uf, y = prop_pessoal*100)) +
+  coord_cartesian(ylim = c(0, 100)) +
+  labs(x = NULL, y = "Proporção de gastos com pessoal (%)")
+
+ggplot(base_final, aes(x=total_func_pref, y=prop_desp_pessoal*100)) + 
+  geom_point()+
+  geom_smooth(method=lm, se=FALSE) +
+  coord_cartesian(ylim = c(0, 100), xlim = c(0, 5000)) +
+  labs(x = "Número de funcionários da prefeitura", y = "Proporção de gastos com pessoal (%)")
+
+```
+
+
+
 
