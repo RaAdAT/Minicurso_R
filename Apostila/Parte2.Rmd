@@ -159,9 +159,19 @@ O **pipe** (**%>%**) é um operador específico do _tidyverse_, que permite cone
 
 ### Manipulação da base de despesas municipais da FINBRA 
 
-Uma breve olhada na base de dados da FINBRA com as funções _View_ ou _head_ permite notar que ela está bem diferente de uma base de dados "padrão", como mostrado no início dessa segunda parte da apostila. Em particular, é possível ver que para cada munícipio há várias linhas com rubricas de despesa. O ideal é resolver o problema por partes.
+Suponha que a ideia da manipulação dos dados de despesas é saber como os municípios se comportam em termos de gastos de pessoal.
 
-Primeiro, é importante definir a informação considerada relevante. Como exemplo, quer-se manter aqui informações de despesa total e despesa de pessoal por município. Para manter apenas essas rubricas, é preciso "filtrar observações com base em seus valores" ou usar a função _filter_ do dplyr:
+Uma breve olhada na base de dados da FINBRA com as funções _View_ ou _head_ permite notar que ela está bem diferente de uma base de dados "padrão", como mostrado no início dessa segunda parte da apostila. Em particular, é possível ver que para cada munícipio há várias linhas com rubricas de despesa (obviamente os valores não são reais):
+
+| Município  | Conta              | Valor | 
+| ---------- |:------------------:| :---: |
+| São Paulo  | Despesa Total      | 100   | 
+| São Paulo  | Despesa de Pessoal | 80    | 
+| Vitória    | Despesa Total      | 30    | 
+| Vitória    | Despesa de Pessoal | 20    |
+
+
+O ideal é resolver o problema por partes. Primeiro, é importante definir a informação considerada relevante. Como exemplo, quer-se manter aqui informações de despesa total e despesa de pessoal por município. Para manter apenas essas rubricas, é preciso "filtrar observações com base em seus valores" ou usar a função _filter_ do dplyr:
 
 ```{r}
 base_finbra <- base_finbra %>% filter(Conta == "Total Despesa" | Conta == "3.1.00.00.00.00 - Pessoal e Encargos Sociais")
@@ -179,13 +189,26 @@ Segundo, é preciso manter apenas as variáveis úteis. A função do _dplyr_ pa
 base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
 ```
 
-É hora de rearranjar a base de dados de modo a deixá-la com uma observação por município. Espera-se que ela fique assim (obviamente os valores não são reais):
+É hora de rearranjar a base de dados de modo a deixá-la com uma observação por município. Espera-se que ela fique assim :
 
 | Município  | Despesa total | Despesa de pessoal| 
-| ---------- |:-------------:| --------------:   |
+| ---------- |:-------------:| : --------------: |
 | São Paulo  | 100           | 80                | 
-| Osasco     | 50            |  30               | 
+| Osasco     | 50            | 30                | 
 | Vitória    | 30            | 20                | 
 | Vila Velha | 20            | 15                |
 
+O pacote do _tidyverse_ que resolve esse problema é o _tidyr_. Ele tem duas funções importantes para o problema: _spread_ e _gather_, em que uma faz o inverso da outra. No caso em questão, usa-se _spread_:
 
+```{r}
+base_finbra <- base_finbra %>% spread(Conta, Valor)
+```
+Note que só é preciso definir as variáveis que são transformadas pela função.
+
+Uma outra coisa útil de se fazer é renomear as variáveis, de forma a deixá-las com nomes simples (sem espaços, caracteres especiais, etc):
+
+```{r}
+base_finbra <- base_finbra %>% rename(cod_ibge = `Cod.IBGE`, despesa_total = `Total Despesa`, despesa_pessoal = `3.1.00.00.00.00 - Pessoal e Encargos Sociais`)
+```
+
+Por fim, 
