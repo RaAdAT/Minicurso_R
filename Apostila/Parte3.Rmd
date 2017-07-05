@@ -2,7 +2,9 @@
 
 ## Criação de estatísticas descritivas com _tidyverse_
 
-### Tabela com a proporçãoo média de gastos com pessoal UF:
+O _tidyverse_ permite através do _dyplyr_ a criação de diversas estatísticas descritivas. Junto da função `group_by`, é possível, por exemplo, gerar estatísticas das variáveis da base criada na [Parte 2](https://github.com/RaAdAT/Minicurso_R/blob/master/Apostila/Parte2.Rmd) por UF. Abaixo estão alguns exemplos:
+
+### Tabela com a proporção média de gastos com pessoal UF:
 
 ```{r}
 prop_pessoal_uf <- base_final %>% group_by(uf) %>% summarise(prop_pessoal = mean(prop_desp_pessoal, na.rm = TRUE))
