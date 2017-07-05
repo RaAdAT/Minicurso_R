@@ -255,4 +255,4 @@ Arquivos .RData guardam todo o ambiente de trabalho (_working space_) utilizado 
 
 ```{r}
 save.image("material_minicurso.RData")
-```{r}
+```
