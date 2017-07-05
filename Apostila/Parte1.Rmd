@@ -87,7 +87,7 @@ x é um objeto e log() é uma função que opera sobre x.
 
 ## Estruturas de dados
 
-As bases de dados utilizadas no R podem ser classificadas ou organizadas de acordo com sua (i) dimensionalidade (1d, 2d ou nd) e  (ii) se são homogêneas (todos os elementos são de mesmo tipo) ou heterogêneas (os elementos são de diferentes tipos). A partir desses parâmetros, pode-se classificar cinco tipos principais de bases de dados:
+Os dados/informações utilizadas no R podem ser classificadas ou organizadas de acordo com sua (i) dimensionalidade (1d, 2d ou nd) e  (ii) se são homogêneas (todos os elementos são de mesmo tipo) ou heterogêneas (os elementos são de diferentes tipos). A partir desses parâmetros, pode-se classificar cinco tipos principais de estruturas de dados:
 
 
 |           | Homogêneo | Heterogêneo    | 
