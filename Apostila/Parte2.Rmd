@@ -246,5 +246,5 @@ O elemento relevante aqui é o "identificador". Para fazer sentido juntar duas b
 Para o exemplo, será utilizado o _inner_join_, apenas para garantir que todos os municípios da base tenham toda a informação disponível:
 
 ```{r}
-base_final <- inner_join(base_munic, base_finbra , by = "cod_ibge")```
+base_final <- inner_join(base_munic, base_finbra , by = "cod_ibge")
 ```
