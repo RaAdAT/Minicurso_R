@@ -197,6 +197,14 @@ base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
 | Vitória    | 30            | 20                 | 
 | Vila Velha | 20            | 15                 |
 
+
+| Município  | Despesa total | Despesa de pessoal | 
+| ---------- |: -----------: | : --------------:  |
+| São Paulo  | 100           | 80                 | 
+| Osasco     | 50            | 30                 | 
+| Vitória    | 30            | 20                 | 
+| Vila Velha | 20            | 15                 |
+
 | Município  | Conta              | Valor | 
 | ---------- |:------------------:| :---: |
 | São Paulo  | Despesa Total      | 100   | 
