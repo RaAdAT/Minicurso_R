@@ -1,3 +1,29 @@
 # Estatísticas descritivas no R
 
-`{r}rvest()`
+## Criação de estatísticas descritivas com _tidyverse_
+
+### Tabela com a proporcao media de gastos com pessoal UF:
+
+```{r}
+prop_pessoal_uf <- base_final %>% group_by(uf) %>% summarise(prop_pessoal = mean(prop_desp_pessoal, na.rm = TRUE))
+```
+
+### Tabela com a soma de gastos de pessoal por UF:
+
+```{r}
+total_pessoal_uf <- base_final %>% group_by(uf) %>% summarise(total_pessoal = mean(despesa_pessoal, na.rm = TRUE))
+```
+
+### Tabela com a proporção mediana de gastos com pessoal por UF:
+
+```{r}
+prop_pessoal_med_uf <- base_final %>% group_by(uf) %>% summarise(prop_med_pessoal = median(prop_desp_pessoal, na.rm = TRUE))
+```
+
+### Tabela com as três estatísticas descritivas:
+
+```{r}
+estat_desc_uf <- base_final %>% group_by(uf) %>% summarise(prop_pessoal = mean(prop_desp_pessoal, na.rm = TRUE),
+                                                             med_pessoal = median(prop_desp_pessoal, na.rm = TRUE),
+                                                             total_pessoal = sum(despesa_pessoal, na.rm = TRUE))
+```
