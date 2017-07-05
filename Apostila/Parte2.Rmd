@@ -153,7 +153,7 @@ A manipulação de dados dentro do _tidyverse_ é feita com o pacote _dplyr_. H�
 - `summarise()`: reduz valores das observações a estatísticas
 - `arrange()`: muda a ordem das observações na base
 
-#### Operador pipe (%>%)
+#### Operador pipe: `%>%`
 
 O **pipe** (`%>%`) é um operador específico do _tidyverse_, que permite conectar uma sequência de operações. Elé é incrivelmente útil e deixa o script "limpo". Logo abaixo há um exemplo que deixa mais claro o seu papel.
 
