@@ -170,7 +170,6 @@ Uma breve olhada na base de dados da FINBRA com as funções _View_ ou _head_ pe
 | Vitória    | Despesa Total      | 30    | 
 | Vitória    | Despesa de Pessoal | 20    |
 
-
 O ideal é resolver o problema por partes. Primeiro, é importante definir a informação considerada relevante. Como exemplo, quer-se manter aqui informações de despesa total e despesa de pessoal por município. Para manter apenas essas rubricas, é preciso "filtrar observações com base em seus valores" ou usar a função _filter_ do dplyr:
 
 ```{r}
@@ -191,12 +190,19 @@ base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
 
 É hora de rearranjar a base de dados de modo a deixá-la com uma observação por município. Espera-se que ela fique assim :
 
-| Município  | Despesa total | Despesa de pessoal| 
-| ---------- |: -----------: | : --------------: |
-| São Paulo  | 100           | 80                | 
-| Osasco     | 50            | 30                | 
-| Vitória    | 30            | 20                | 
-| Vila Velha | 20            | 15                |
+| Município  | Despesa total | Despesa de pessoal | 
+| ---------- |: -----------: | : --------------:  |
+| São Paulo  | 100           | 80                 | 
+| Osasco     | 50            | 30                 | 
+| Vitória    | 30            | 20                 | 
+| Vila Velha | 20            | 15                 |
+
+| Município  | Conta              | Valor | 
+| ---------- |:------------------:| :---: |
+| São Paulo  | Despesa Total      | 100   | 
+| São Paulo  | Despesa de Pessoal | 80    | 
+| Vitória    | Despesa Total      | 30    | 
+| Vitória    | Despesa de Pessoal | 20    |
 
 O pacote do _tidyverse_ que resolve esse problema é o _tidyr_. Ele tem duas funções importantes para o problema: _spread_ e _gather_, em que uma faz o inverso da outra. No caso em questão, usa-se _spread_:
 
