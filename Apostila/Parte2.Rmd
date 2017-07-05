@@ -210,7 +210,7 @@ Uma outra coisa útil de se fazer é renomear as variáveis, de forma a deixá-l
 base_finbra <- base_finbra %>% rename(cod_ibge = `Cod.IBGE`, despesa_total = `Total Despesa`, despesa_pessoal = `3.1.00.00.00.00 - Pessoal e Encargos Sociais`)
 ```
 
-Por fim, cria-se uma variável que dá uma ideia de quanto dos gastos dos mumicípios é voltado para gasto de pessoal:
+Por fim, cria-se uma variável que dá uma ideia de quanto dos gastos dos municípios é voltado para gasto de pessoal:
 
 ```{r}
 base_finbra <- base_finbra %>% mutate(prop_desp_pessoal = despesa_pessoal/despesa_total)
