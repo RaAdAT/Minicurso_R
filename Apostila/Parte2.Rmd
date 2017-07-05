@@ -248,3 +248,11 @@ Para o exemplo, será utilizado o `inner_join`, apenas para garantir que todos o
 ```{r}
 base_final <- inner_join(base_munic, base_finbra , by = "cod_ibge")
 ```
+
+## Arquivos .RData
+
+Arquivos .RData guardam todo o ambiente de trabalho (_working space_) utilizado no R. Diferentemente de programas como o Stata e SSPS, que salvam uma base de dados por vez, o R permite guardar de uma só vez num aquivo .RData várias bases de dados. A função que salva o ambiente de trabalho do R é `save.image`. Salvando o atual ambiente de trabalho, tem-se:
+
+```{r}
+save.image("material_minicurso.RData")
+```{r}
