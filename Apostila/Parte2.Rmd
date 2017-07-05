@@ -185,7 +185,7 @@ Para entender o que foi feito:
 Segundo, é preciso manter apenas as variáveis úteis. A função do _dplyr_ para tanto é a _select_:
 
 ```{r}
-base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
+base_finbra <- base_finbra %>% select(Cod.IBGE, UF, Conta, Valor)
 ```
 
 É hora de rearranjar a base de dados de modo a deixá-la com uma observação por município. Espera-se que ela fique assim :
@@ -207,7 +207,7 @@ Note que só é preciso definir as variáveis que são transformadas pela funç�
 Uma outra coisa útil de se fazer é renomear as variáveis, de forma a deixá-las com nomes simples (sem espaços, caracteres especiais, etc):
 
 ```{r}
-base_finbra <- base_finbra %>% rename(cod_ibge = `Cod.IBGE`, despesa_total = `Total Despesa`, despesa_pessoal = `3.1.00.00.00.00 - Pessoal e Encargos Sociais`)
+base_finbra <- base_finbra %>% rename(cod_ibge = `Cod.IBGE`, uf == UF, despesa_total = `Total Despesa`, despesa_pessoal = `3.1.00.00.00.00 - Pessoal e Encargos Sociais`)
 ```
 
 Por fim, cria-se uma variável que dá uma ideia de quanto dos gastos dos municípios é voltado para gasto de pessoal:
