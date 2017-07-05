@@ -21,7 +21,7 @@ base_de_dados <- data.frame(Nome, Idade, Mulher, stringsAsFactors = FALSE)
 print(base_de_dados)
 ```
 
-Para acessar os antigos vetores criados (agora variáveis da base dados), basta escrever "nome da base de dados"$"nome da variável". Tal sintaxe se deve ao fato de que é possível abrir e manipular diversas bases de dados no R simultaneamente. Um exemplo para o _data.frame_ criado:
+Para acessar os antigos vetores criados (agora variáveis da base dados), basta escrever `nome da base de dados$nome da variável`. Tal sintaxe se deve ao fato de que é possível abrir e manipular diversas bases de dados no R simultaneamente. Um exemplo para o _data.frame_ criado:
 
 ```{r}
 print(base_de_dados$Nome)
@@ -29,7 +29,7 @@ print(base_de_dados$Nome)
 
 ## Interação com a base de dados
 
-Há alguns comandos que permitem interagir visualmente com uma base de dados. Por exemplo, _View_ (note a letra maiúscula) mostra a base de dados inteira.
+Há alguns comandos que permitem interagir visualmente com uma base de dados. Por exemplo, `View` (note a letra maiúscula) mostra a base de dados inteira.
 
 ```{r}
 View(base_de_dados)
@@ -41,13 +41,13 @@ A função _head_ apresenta as 6 primeiras linhas da base de dados:
 head(base_de_dados)
 ```
 
-A função _tail_ apresenta as 6 últimas linhas da base de dados:
+A função `tail` apresenta as 6 últimas linhas da base de dados:
 
 ```{r}
 tail(base_de_dados)
 ```
 
-A função _str_ mostra a _classe_ de cada variável:
+A função `str` mostra a _classe_ de cada variável:
 
 ```{r}
 str(base_de_dados)
@@ -61,7 +61,7 @@ Tais funções possuem argumentos que podem ser definidos explicitamente. Por ex
 head(x = base_de_dados, n = 3)
 ```
 
-Para reportar os argumentos que uma função possui, basta utilizar a função _args_. Para o exemplo acima:
+Para reportar os argumentos que uma função possui, basta utilizar a função `args`. Para o exemplo acima:
 
 ```{r}
 args(head)
@@ -89,7 +89,7 @@ Há dois pacotes que armazenam funções de importação dentro do _tidyverse_: 
 
 O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, txt, etc.). Algumas de suas funções são:
 
-- **_read_csv( )_**: arquivos csv (separador: ,)
+- `read_csv( )`: arquivos csv (separador: ,)
 - **_read_csv2()_**: arquivos csv (separador: ;)
 - **_read_tsv( )_**: arquivos separados por tab
 - **_read_delim( )_**: arquivos com delimitador genérico
