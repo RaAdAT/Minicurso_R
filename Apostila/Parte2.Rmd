@@ -90,7 +90,7 @@ Há dois pacotes que armazenam funções de importação dentro do _tidyverse_: 
 O **_readr_** é reponsável pela leitura de arquivos em formato "retangular" (csv, txt, etc.). Algumas de suas funções são:
 
 - **_read_csv( )_**: arquivos csv (separador: ,)
-- **_read_csv()_**: arquivos csv (separador: ;)
+- **_read_csv2()_**: arquivos csv (separador: ;)
 - **_read_tsv( )_**: arquivos separados por tab
 - **_read_delim( )_**: arquivos com delimitador genérico
 - **_read_fwf( )_**: arquivos de largura fixa
@@ -140,7 +140,7 @@ Uma vez baixados os dados, é possível importar os arquivos com as funções _r
 
 ```{r}
 base_munic  <- read_excel("Base_MUNIC_2015.xls", "Recursos humanos", col_names = T, na = "-")
-base_finbra <- read_csv2("despesa_natureza.csv", quote = "", col_names = T, skip = 3, locale)
+base_finbra <- read_csv2("despesa_natureza.csv", quote = "", col_names = T, skip = 3, locale = locale(encoding = "latin1"))
 ```
 
 ## Manipulação de dados com o tidyverse
@@ -153,4 +153,23 @@ A manipulação de dados dentro do _tidyverse_ é feita com o pacote _dplyr_. H�
 - **_summarise( )_**: reduz valores das observações a estatísticas
 - **_arrange( )_**: muda a ordem das observações na base
 
+### Manipulação da base de despesas municipais da FINBRA 
+
+Uma breve olhada na base de dados da FINBRA com as funções _View_ ou _head_ permite notar que ela está bem diferente de uma base de dados "padrão", como mostrado no início dessa segunda parte da apostila. Em particular, é possível ver que para cada munícipio há várias linhas com rubricas de despesa. O ideal é resolver o problema por partes.
+
+Primeiro, é importante definir a informação considerada relevante. Como exemplo, quer-se manter aqui informações de despesa total e despesa de pessoal por município. Para manter apenas essas rubricas, é preciso "filtrar observações com base em seus valores" ou usar a função _filter_ do dplyr:
+
+```{r}
+base_finbra <- base_finbra %>% filter(Conta == "Total Despesa" | Conta == "3.1.00.00.00.00 - Pessoal e Encargos Sociais")
+```
+
+Para entender o que foi feito:
+
+```{r}
+# nova base de dados <- base de dados original %>% manipulação dos dados
+```
+
+#### Operador pipe (%>%)
+
+O **pipe** (**%>%**) é um operador específico do tidyverse, que permite conectar uma sequência de operações. Elé é incrivelmente útil e deixa o script "limpo".
 
