@@ -192,7 +192,7 @@ base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
 
 | Município  | Despesa total | Despesa de pessoal | 
 | ---------- |: -----------: | : --------------:  |
-| São Paulo  | 100           | 80                 | 
+| São Paulo | 100           | 80                 | 
 | Osasco     | 50            | 30                 | 
 | Vitória    | 30            | 20                 | 
 | Vila Velha | 20            | 15                 |
@@ -205,12 +205,12 @@ base_finbra <- base_finbra %>% select(Cod.IBGE, Conta, Valor)
 | Vitória    | 30            | 20                 | 
 | Vila Velha | 20            | 15                 |
 
-| Município  | Conta              | Valor | 
+| Município  | Despesa total      | Despesa de pessoal | 
 | ---------- |:------------------:| :---: |
-| São Paulo  | Despesa Total      | 100   | 
-| São Paulo  | Despesa de Pessoal | 80    | 
-| Vitória    | Despesa Total      | 30    | 
-| Vitória    | Despesa de Pessoal | 20    |
+| São Paulo  | 100      | 80   | 
+| Osasco  | 50 | 30    | 
+| Vitória    | 30      | 20    | 
+| Vila Velha    | 20 | 15    |
 
 O pacote do _tidyverse_ que resolve esse problema é o _tidyr_. Ele tem duas funções importantes para o problema: _spread_ e _gather_, em que uma faz o inverso da outra. No caso em questão, usa-se _spread_:
 
