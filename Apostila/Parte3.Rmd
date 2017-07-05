@@ -1,5 +1,11 @@
 # Estatísticas descritivas no R
 
+Antes de iniciar o conteúdo dessa parte da terceira parte do minicurso, vale o aprendizado de como se carrega todo o material utilizado numa sessão anterior do R. A função para tanto é a `load`:
+
+```{r}
+load("myWorkspace.RData")
+```
+
 ## Criação de estatísticas descritivas com _tidyverse_
 
 O _tidyverse_ permite através do _dyplyr_ a criação de diversas estatísticas descritivas. Junto da função `group_by`, é possível, por exemplo, gerar estatísticas das variáveis da base criada na [Parte 2](https://github.com/RaAdAT/Minicurso_R/blob/master/Apostila/Parte2.Rmd) por UF. Abaixo estão alguns exemplos:
