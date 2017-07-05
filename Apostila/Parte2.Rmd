@@ -155,7 +155,7 @@ A manipulação de dados dentro do _tidyverse_ é feita com o pacote _dplyr_. H�
 
 #### Operador pipe: `%>%`
 
-O **pipe** (`%>%`) é um operador específico do _tidyverse_, que permite conectar uma sequência de operações. Elé é incrivelmente útil e deixa o script "limpo". Logo abaixo há um exemplo que deixa mais claro o seu papel.
+O **pipe** é um operador específico do _tidyverse_, que permite conectar uma sequência de operações. Elé é incrivelmente útil e deixa o script "limpo". Logo abaixo há um exemplo que deixa mais claro o seu papel.
 
 ### Manipulação da base de despesas municipais da FINBRA 
 
