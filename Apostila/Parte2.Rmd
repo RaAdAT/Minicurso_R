@@ -133,7 +133,7 @@ url_finbra  <- "https://github.com/RaAdAT/Minicurso_R/raw/master/despesa_naturez
 Há um comando específico para baixar arquivos da internet: o `download.file`. Há dois argumentos básicos nele: o url e o nome do arquivo de destino:
 
 ```{r}
-download.file(url_munic, "Base_MUNIC_2015.xls")
+download.file(url_munic, "Base_MUNIC_2015.xlsx")
 download.file(url_finbra, "despesa_natureza.csv")
 ```
 
