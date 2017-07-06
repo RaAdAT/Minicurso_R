@@ -101,7 +101,8 @@ O **_readxl_** é um pacote específico para abrir arquivos em formato .xls ou .
 
 - `read_excel()`: arquivos xls ou xlsx
 
-Apesar fazer parte do tidyverse, o pacote **readxl** não é carregado diretamente pelo _tidyverse_. Então:
+**Detalhe:** todos os pacotes que fazem parte do tidyverse podem ser instalados e carregados diretamente. Por exemplo, o **readxl**:
+
 ```{r}
 install.packages("readxl") 
 library(readxl)
@@ -109,8 +110,8 @@ library(readxl)
 
 Para fins do minicurso, serão utilizadas duas bases de dados como exemplo: 
 
-- Dados da Pesquisa de Informações Básicas Municipais (MUNIC) de 2015 em formato .xls
-- Dados de despesas por natureza da despesa das Finanças Públicas Municipais (FINBRA) em formato .csv
+- Dados da Pesquisa de Informações Básicas Municipais (MUNIC) de 2015 em formato .xls ([link do IBGE](http://www.ibge.gov.br/home/estatistica/economia/perfilmunic/))
+- Dados de despesas por natureza da despesa das Finanças Públicas Municipais (FINBRA) em formato .csv ([link do Tesouro Nacional](http://www.tesouro.fazenda.gov.br/pt_PT/contas-anuais))
 
 O uso dos comandos é facilmente transbordável para arquivos com outras extensões. Os dados estão disponíveis no próprio repositório.
 
