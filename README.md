@@ -16,4 +16,4 @@ O curso está dividido em três partes:
 - [Parte 2](https://github.com/RaAdAT/Minicurso_R/blob/master/Apostila/Parte2.Rmd) - Abrindo e manipulando bases de dados no R
 - [Parte 3](https://github.com/RaAdAT/Minicurso_R/blob/master/Apostila/Parte3.Rmd) - Estatísticas descritivas no R
 
-Script de acompanhamento em sala: [versão web](https://gist.github.com/RaAdAT/13ed01f5c89f838360455d36cf51ba66) [download](https://gist.github.com/RaAdAT/13ed01f5c89f838360455d36cf51ba66/archive/d47aac97f33ec3d4718c2f03c0fdd734ca4cf344.zip)
+Script de acompanhamento em sala: [versão web](https://gist.github.com/RaAdAT/13ed01f5c89f838360455d36cf51ba66) e [download](https://gist.github.com/RaAdAT/13ed01f5c89f838360455d36cf51ba66/archive/d47aac97f33ec3d4718c2f03c0fdd734ca4cf344.zip)
