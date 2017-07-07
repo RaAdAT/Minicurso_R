@@ -102,47 +102,28 @@ Neste minicurso, serão discutidos com mais calma os objetos de tipo "Vetor" e "
 
 O R serve como calculadora e realizar operações matemáticas é bem simples.
 
-Soma:
-
 ```{r}
-15 + 5
+15 + 5 # Soma
+
+15 - 5 # Subtração
+
+15 * 5 # Multiplicação
+
+15 / 5 # Divisão
+
+2 ^ 2 #Potência
+
+16 %/% 5 # Divisão inteira (sem resto):
+
+16 %% 5 #Resto da divisão
 ```
 
-Subtração:
+As operações matemáticas apresentadas acima são funções dentro do R. Para que fique claro, abaixo está a mesma suma, mas agora com a função explícita:
 
 ```{r}
-15 - 5
+`+`(15, 5)
 ```
 
-Multiplicação:
-
-```{r}
-15 * 5
-```
-
-Divisão:
-
-```{r}
-15 / 5
-```
-
-Potência:
-
-```{r}
-2 ^ 2
-```
-
-Divisão inteira (sem resto):
-
-```{r}
-16 %/% 5
-```
-
-Resto da divisão:
-
-```{r}
-16 %% 5
-```
 Para criar uma sequência simples de números no R, basta utilizar o operador `:`. Ele cria um vetor em sua forma mais simples:
 
 ```{r}
