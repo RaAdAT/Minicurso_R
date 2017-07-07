@@ -111,11 +111,11 @@ O R serve como calculadora e realizar operações matemáticas é bem simples.
 
 15 / 5 # Divisão
 
-2 ^ 2 #Potência
+2 ^ 2 # Potência
 
 16 %/% 5 # Divisão inteira (sem resto):
 
-16 %% 5 #Resto da divisão
+16 %% 5 # Resto da divisão
 ```
 
 As operações matemáticas apresentadas acima são funções dentro do R. Para que fique claro, abaixo está a mesma suma, mas agora com a função explícita (entre crases):
