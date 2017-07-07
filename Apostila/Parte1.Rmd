@@ -98,7 +98,7 @@ Os dados/informações utilizadas no R podem ser classificadas ou organizadas de
 
 Neste minicurso, serão discutidos com mais calma os objetos de tipo "Vetor" e "Base de dados". Tal escolha parte do princípio de que os inscritos trabalharão prioritariamente com bases de dados. Além disso, como será visto, bases de dados são combinações de vários vetores.
 
-## Operações matemáticas e vetores atômicos
+## Operações matemáticas
 
 O R serve como calculadora e realizar operações matemáticas é bem simples.
 
@@ -129,6 +129,9 @@ Para criar uma sequência simples de números no R, basta utilizar o operador `:
 ```{r}
 1:6
 ```
+
+## Objetos e vetores
+
 Pode até ser divertido utilizar o R como uma calculadora, mas sua principal virtude está em criar todo o tipo de objeto. Dos mais simples aos mais complexos. Talvez sua versão mais simples seja o que conhecemos como "variável" do ensino básico. Isto é:
 
 ```{r}
