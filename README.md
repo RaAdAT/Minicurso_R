@@ -10,16 +10,16 @@ O objetivo do minicurso é oferecer uma breve introdução à linguagem R e suas
 
 1. O básico do R
     + Tipos de elementos no R
-  + Estruturas de dados
-  + Objetos e vetores
-  + Operadores
-  + Funções
+    + Estruturas de dados
+    + Objetos e vetores
+    + Operadores
+    + Funções
 2. Abrindo e manipulando bases de dados no R
-  + Bases de dados no R
-  + Funções para bases de dados pelo _tidyverse_
+    + Bases de dados no R
+    + Funções para bases de dados pelo _tidyverse_
 3. Estatísticas descritivas no R
-  + Tabelas
-  + Gráficos
+    + Tabelas
+    + Gráficos
 
 ## Conteúdo
 
