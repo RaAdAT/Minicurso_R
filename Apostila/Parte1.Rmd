@@ -118,7 +118,7 @@ O R serve como calculadora e realizar operações matemáticas é bem simples.
 16 %% 5 # Resto da divisão
 ```
 
-As operações matemáticas apresentadas acima são funções dentro do R. Para que fique claro, abaixo está a mesma suma, mas agora com a função explícita (entre crases):
+As operações matemáticas apresentadas acima são funções dentro do R. Para que fique claro, abaixo está a mesma soma, mas agora com a função explícita (entre crases):
 
 ```{r}
 `+`(15, 5)
