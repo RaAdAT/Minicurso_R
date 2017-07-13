@@ -4,13 +4,26 @@
 
 Rafael Alves de Albuquerque Tavares
 
-## Objetivo
+## Objetivo e programa
 
-O objetivo do minicurso é oferecer uma breve introdução à linguagem R e suas funcionalidades. O programa é voltado para a ciência de dados e apresenta caminhos para a estruturação e manipulação de bases de dados e a geração de estatísticas descritivas dos dados construídos.
+O objetivo do minicurso é oferecer uma breve introdução à linguagem R e suas funcionalidades. O programa é voltado para a ciência de dados e apresenta caminhos para a estruturação e manipulação de bases de dados e a geração de estatísticas descritivas dos dados construídos. Ele é dividido em três grandes seções:
+
+1. O básico do R
+  + Tipos de elementos no R
+  + Estruturas de dados
+  + Objetos e vetores
+  + Operadores
+  + Funções
+2. Abrindo e manipulando bases de dados no R
+  + Bases de dados no R
+  + Funções para bases de dados pelo _tidyverse_
+3. Estatísticas descritivas no R
+  + Tabelas
+  + Gráficos
 
 ## Conteúdo
 
-O curso está dividido em três partes: 
+O material do curso está dividido em três partes: 
 
 - [Parte 1](https://github.com/RaAdAT/Minicurso_R/blob/master/Apostila/Parte1.Rmd) - O básico do R
 - [Parte 2](https://github.com/RaAdAT/Minicurso_R/blob/master/Apostila/Parte2.Rmd) - Abrindo e manipulando bases de dados no R
