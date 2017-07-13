@@ -9,7 +9,7 @@ Rafael Alves de Albuquerque Tavares
 O objetivo do minicurso é oferecer uma breve introdução à linguagem R e suas funcionalidades. O programa é voltado para a ciência de dados e apresenta caminhos para a estruturação e manipulação de bases de dados e a geração de estatísticas descritivas dos dados construídos. Ele é dividido em três grandes seções:
 
 1. O básico do R
- + Tipos de elementos no R
++ Tipos de elementos no R
   + Estruturas de dados
   + Objetos e vetores
   + Operadores
