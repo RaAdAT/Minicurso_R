@@ -137,7 +137,7 @@ Pode até ser divertido utilizar o R como uma calculadora, mas sua principal vir
 ```{r}
 x <- 15
 ```
-Note que pode-se utilizar tanto o operador `<-` como `=`:
+Note que é possível utilizar tanto o operador `<-` como `=`:
 
 ```{r}
 x = 15
