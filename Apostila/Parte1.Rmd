@@ -142,7 +142,7 @@ Note que é possível utilizar tanto o operador `<-` como `=`:
 ```{r}
 x = 15
 ```
-Note ainda que, diferentemente dos casos anteriores, não apareceu "resultado" da operação logo após a execução do comando. Para imprimir o valor de uma variável no console basta digitar seu nome:
+Note ainda que, diferentemente dos casos anteriores, não apareceu o "resultado" da operação logo após a execução do comando. Para imprimir o valor de uma variável no console basta digitar seu nome:
 
 ```{r}
 x
