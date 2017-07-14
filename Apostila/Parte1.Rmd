@@ -165,9 +165,11 @@ x * y
 Novamente, é possível criar objetos que armazenem o resultado dessas operações. Veja os exemplos:
 
 ```{r}
-z1 <- 42 / 3
-z2 <- x + y
-z3 <- ((x / 5 ) * 9) + 32
+v1 <- 42 / 3
+v2 <- x + y
+v3 <- 1/exp()
+v3 <- exp(-(x^2)/2)/sqrt(2*pi)
+
 ```
 
 É possível listar os objetos até então criados com a função `ls`:
@@ -373,4 +375,19 @@ Note que a função é definida como um objeto, em que o nome do objeto será o 
 #   operação a ser feita ("corpo da função")
 #   resultado a ser apresentado
 # } 
+```
+Para um exemplo mais interessante, abaixo está a função densidade de probabilidade de uma variável normal padrão:
+
+```{r}
+dens_normal_p <- function(x){
+   return(exp(-(x^2)/2)/sqrt(2*pi))
+}
+```
+
+Nesse caso, a variável `x` tem uma distribuição normal padrão. Note que o código foi encurtado e que ainda assim o R ainda entende o que foi escrito. É possível verificar o resultado com a função nativa do R para a densidade da normal padrão: 
+
+```{r}
+dens_normal_p(3)
+dnorm(3)
+}
 ```
