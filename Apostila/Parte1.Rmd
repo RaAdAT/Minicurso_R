@@ -391,5 +391,4 @@ Nesse caso, a variável `x` tem uma distribuição normal padrão. Note que o c�
 ```{r}
 dens_normal_p(3)
 dnorm(3)
-}
 ```
