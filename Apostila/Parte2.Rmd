@@ -21,7 +21,7 @@ base_de_dados <- data.frame(Nome, Idade, Mulher, stringsAsFactors = FALSE)
 print(base_de_dados)
 ```
 
-Para acessar os antigos vetores criados (agora variáveis da base dados), basta escrever `nome da base de dados$nome da variável`. Tal sintaxe se deve ao fato de que é possível abrir e manipular diversas bases de dados no R simultaneamente. Um exemplo para o _data.frame_ criado:
+Para acessar os antigos vetores criados (agora variáveis da base dados), basta escrever `"nome da base de dados"$"nome da variável"` (sem as aspas). Tal sintaxe se deve ao fato de que é possível abrir e manipular diversas bases de dados no R simultaneamente. Um exemplo para o _data.frame_ criado:
 
 ```{r}
 print(base_de_dados$Nome)
