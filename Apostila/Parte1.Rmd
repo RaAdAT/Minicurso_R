@@ -384,7 +384,9 @@ dens_normal_p <- function(x){
 }
 ```
 
-Nesse caso, a variável `x` tem uma distribuição normal padrão. Note que o código foi encurtado e que ainda assim o R ainda entende o que foi escrito. É possível verificar o resultado com a função nativa do R para a densidade da normal padrão: 
+Nesse caso, a variável `x` tem uma distribuição normal padrão. Note que o código foi encurtado e ainda assim o R ainda entende o que foi escrito. 
+
+É possível verificar o resultado comparando-o com a função nativa do R para a densidade da normal padrão: 
 
 ```{r}
 dens_normal_p(3)
