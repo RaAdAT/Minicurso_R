@@ -1,4 +1,4 @@
-# Minicurso de introdução ao R - FEA/USP 2017
+# Minicurso de introdução ao R
 
 ### Responsável: 
 
