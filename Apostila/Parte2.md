@@ -1,6 +1,6 @@
 # Bases de Dados
 
-Bases de dados podem ser entendidas como um conjunto de vetores para de mesmo tamanho, em que cada coluna da base de dados é um vetor. No exemplo abaixo é apresentada uma base de dados com três vetores: "Nome", "Idade" e "Mulher", com classes _character_, _numerical_ e _logical_, respectivamente:
+Bases de dados podem ser entendidas como um conjunto de vetores de mesmo tamanho, em que cada coluna da base de dados é um vetor. No exemplo abaixo é apresentada uma base de dados com três vetores: "Nome", "Idade" e "Mulher", com classes _character_, _numerical_ e _logical_, respectivamente:
 
 | Nome   | Idade | Mulher| 
 | -------|:-----:| -----:|
