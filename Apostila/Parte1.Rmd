@@ -2,7 +2,7 @@
 
 A ideia dessa primeira parte é comentar sobre os principais elementos fundamentais da linguagem R. Pode-se pensar também como uma apresentação dos principais vocábulos da linguagem.
 
-## Referências para estudo
+### Referências para estudo
 
 Antes de iniciar o conteúdo do curso propriamente dito, vale comentar sobre algumas boas referências disponíveis na internet para estudo posterior:
 
