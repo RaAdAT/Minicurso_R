@@ -23,7 +23,7 @@ A interface do RStudio é separada em quatro "janelas":
 
 - **Crtl + Enter**:	        executa a(s) linha(s) selecionada(s) do script
 - **Crtl + a**: 	          seleciona todas as linhas do script
-- **Ctrl + Shift + Enter**: executa todas as linhas dos script
+- **Ctrl + Shift + Enter**: executa todas as linhas do script
 - **Crtl + l**:	            limpa o console
 - **Esc**: 	                interrompe execução
 
