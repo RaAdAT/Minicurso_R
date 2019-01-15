@@ -45,7 +45,7 @@ A ideia aqui é que se acompanhe o conteúdo apresentado no minicurso colocando 
 
 ### Comentários no script
 
-Comentários são peça-chave de um bom script. Com eles é possível comunicar o que está sendo feito no código (mesmo que para você mesmo no futuro). Para fazer comentários no _script_ (ou garantir que o R não "lerá" como uma operação a ser feita), basta utilizar `#` no início da linha:
+Comentários são peça-chave de um bom script. Com eles é possível comunicar o que está sendo feito no código (mesmo que para você mesma no futuro). Para fazer comentários no _script_ (ou garantir que o R não "lerá" como uma operação a ser feita), basta utilizar `#` no início da linha:
 
 ```{r}
 # Esta linha contém um comentário
