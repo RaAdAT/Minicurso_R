@@ -126,8 +126,8 @@ getwd()
 Colocando os links das bases de dados em objetos:
 
 ```{r}
-url_munic   <- "https://github.com/RaAdAT/Minicurso_R/raw/master/base_munic_2015.xlsx"
-url_finbra  <- "https://github.com/RaAdAT/Minicurso_R/raw/master/despesa_natureza.csv"
+url_munic   <- "https://github.com/tavaresrafael/Minicurso_R/raw/master/base_munic_2015.xlsx"
+url_finbra  <- "https://github.com/tavaresrafael/Minicurso_R/raw/master/despesa_natureza.csv"
 ```
 
 Há um comando específico para baixar arquivos da internet: o `download.file`. Há dois argumentos básicos nele: o url e o nome do arquivo de destino:
